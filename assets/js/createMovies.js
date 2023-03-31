@@ -13,8 +13,7 @@ export const createMoviesContainer = (movie = {}) => {
     movieSectionRow.appendChild(divCol)
     divCol.appendChild(divGalleryItem)
     divGalleryItem.appendChild(movieImg)
-    divGalleryItem.addEventListener('click', () =>   setModalData(movie))
- 
+    divGalleryItem.addEventListener('click', () => setModalData(movie))
 }
 
 export const setModalData = (movie = {}) => {
