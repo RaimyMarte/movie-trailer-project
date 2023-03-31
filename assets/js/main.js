@@ -1,5 +1,5 @@
-import { createMoviesContainer, setModalData } from "./movies.js";
-
+import { movieData } from "./movieData.js";
+import { createMoviesContainer, setModalData } from "./createMovies.js";
 /**
 * Template Name: PhotoFolio
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -97,66 +97,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
 
-  /**
-   * Init swiper slider with 1 slide at once in desktop view
-   */
-  new Swiper('.slides-1', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
+  // /**
+  //  * Init swiper slider with 1 slide at once in desktop view
+  //  */
+  // new Swiper('.slides-1', {
+  //   speed: 600,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false
+  //   },
+  //   slidesPerView: 'auto',
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     type: 'bullets',
+  //     clickable: true
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   }
+  // });
 
-  /**
-   * Init swiper slider with 3 slides at once in desktop view
-   */
-  new Swiper('.slides-3', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      },
+  // /**
+  //  * Init swiper slider with 3 slides at once in desktop view
+  //  */
+  // new Swiper('.slides-3', {
+  //   speed: 600,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false
+  //   },
+  //   slidesPerView: 'auto',
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     type: 'bullets',
+  //     clickable: true
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  //   breakpoints: {
+  //     320: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 40
+  //     },
 
-      1200: {
-        slidesPerView: 3,
-      }
-    }
-  });
+  //     1200: {
+  //       slidesPerView: 3,
+  //     }
+  //   }
+  // });
 
   /**
    * Animation on scroll function and init
@@ -175,18 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+movieData.forEach(movie =>{
+  createMoviesContainer(movie)
+})
 
-const movieData = {
-  name: 'Doctor Strange en el multiverso de la locura',
-  videoID: 'cFHjZfy50Kk',
-  sinopsis: 'Después de los eventos de Spider-Man No Way Home, el Doctor Strange, sin darse cuenta, lanza un hechizo prohibido que accidentalmente abre el multiverso. Con la ayuda de Wong y Scarlet Witch, Strange se enfrenta a varias versiones de sí mismo y se une al joven América Chavez mientras viaja a través de varias realidades y trabaja para restaurar la realidad tal como la conoce. En el camino, Strange y sus aliados se dan cuenta de que deben enfrentarse a un nuevo y poderoso adversario que busca apoderarse del multiverso.',
-  reparto: 'Benedict Cumberbatch, Elizabeth Olsen, Chiwetel Ejiofor',
-  direccion: 'Sam Raimi',
-  guion: 'Michael Waldron, Stan Lee,Steve Ditko',
-  generos: 'Acción, Aventura, Fantasía, Terror, Ciencia ficción'
-}
-
-
-
-createMoviesContainer()
-// setModalData(movieData)
