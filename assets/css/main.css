@@ -715,6 +715,7 @@ h6 {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .gallery .gallery-item img {

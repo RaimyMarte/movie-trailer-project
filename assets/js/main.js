@@ -1,3 +1,5 @@
+import { createMoviesContainer, setModalData } from "./movies.js";
+
 /**
 * Template Name: PhotoFolio
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -30,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       event.preventDefault();
       mobileNavToogle();
     })
@@ -66,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       if (document.querySelector('.mobile-nav-active')) {
         event.preventDefault();
         this.classList.toggle('active');
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
-    const togglescrollTop = function() {
+    const togglescrollTop = function () {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
     window.addEventListener('load', togglescrollTop);
@@ -172,3 +174,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+const movieData = {
+  name: 'Doctor Strange en el multiverso de la locura',
+  videoID: 'cFHjZfy50Kk',
+  sinopsis: 'Después de los eventos de Spider-Man No Way Home, el Doctor Strange, sin darse cuenta, lanza un hechizo prohibido que accidentalmente abre el multiverso. Con la ayuda de Wong y Scarlet Witch, Strange se enfrenta a varias versiones de sí mismo y se une al joven América Chavez mientras viaja a través de varias realidades y trabaja para restaurar la realidad tal como la conoce. En el camino, Strange y sus aliados se dan cuenta de que deben enfrentarse a un nuevo y poderoso adversario que busca apoderarse del multiverso.',
+  reparto: 'Benedict Cumberbatch, Elizabeth Olsen, Chiwetel Ejiofor',
+  direccion: 'Sam Raimi',
+  guion: 'Michael Waldron, Stan Lee,Steve Ditko',
+  generos: 'Acción, Aventura, Fantasía, Terror, Ciencia ficción'
+}
+
+
+
+createMoviesContainer()
+// setModalData(movieData)
