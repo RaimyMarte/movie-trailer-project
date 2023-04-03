@@ -20,19 +20,19 @@ export const createMoviesContainer = (movie = {}) => {
 export const setModalData = (movie = {}) => {
     const movieName = document.getElementById('movie-name')
     const movieVideo = document.getElementById('movie-video')
-    const movieSinopsis = document.getElementById('movie-sinopsis')
-    const movieReparto = document.getElementById('movie-reparto')
-    const movieDireccion = document.getElementById('movie-direccion')
-    const movieGuion = document.getElementById('movie-guion')
-    const movieGeneros = document.getElementById('movie-generos')
+    const movieSynopsis = document.getElementById('movie-synopsis')
+    const movieCast = document.getElementById('movie-cast')
+    const movieDirection = document.getElementById('movie-direction')
+    const movieRelease = document.getElementById('movie-release')
+    const movieGenres = document.getElementById('movie-genres')
 
     movieVideo.setAttribute('src', `https://www.youtube.com/embed/${movie.video}`)
     movieName.textContent = movie.nombre
-    movieSinopsis.textContent = movie.sinopsis
-    movieReparto.textContent = movie.reparto
-    movieDireccion.textContent = movie.direccion
-    movieGuion.textContent = movie.guion
-    movieGeneros.textContent = movie.generos
+    movieSynopsis.textContent = movie.sinopsis
+    movieCast.textContent = movie.reparto
+    movieDirection.textContent = movie.direccion
+    movieRelease.textContent = movie.year
+    movieGenres.textContent = movie.generos
 }
 
 
