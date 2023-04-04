@@ -1,3 +1,8 @@
+import { getDataFromAPI } from "./getDataFromAPI.js"
+
+
+
+
 export const createMoviesContainer = (movie = {}) => {
     const movieSectionRow = document.getElementById('movieSectionRow')
     const divCol = document.createElement('div')
@@ -35,4 +40,9 @@ export const setModalData = (movie = {}) => {
     movieGenres.textContent = movie.generos
 }
 
+const movieData = await getDataFromAPI()
 
+movieData.forEach(movie =>{
+    createMoviesContainer(movie)
+  })
+  

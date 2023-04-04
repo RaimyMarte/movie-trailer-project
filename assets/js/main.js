@@ -1,5 +1,3 @@
-import { createMoviesContainer } from "./createMovies.js";
-import { getDataFromAPI } from "./getDataFromAPI.js";
 /**
 * Template Name: PhotoFolio
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -168,10 +166,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-
-const movieData = await getDataFromAPI()
-
-movieData.forEach(movie => {
-  createMoviesContainer(movie)
-})
-
