@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: #f52314;
   --color-secondary: #161718;
 }
 
@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: #32cf93;
+  color: rgba(39, 167, 118, 0.8);
   text-decoration: none;
 }
 
@@ -135,7 +135,7 @@ h6 {
 }
 
 .page-header .cta-btn:hover {
-  background: #2cbc85;
+  background: rgba(39, 167, 118, 0.8);
 }
 
 /*--------------------------------------------------------------
@@ -1176,12 +1176,17 @@ h6 {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 30vh;
-  background: #000;
-  background-size: cover;
+  min-height: 85vh;
   position: relative;
   padding: 140px 0 60px 0;
+  background-image: url(https://movies.universalpictures.com/media/smb-1920x1080-rainbowroad-apr5-rgb-4-1-63fff8d9eec08-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 3rem;
+  cursor: pointer;
 }
+
 
 .hero h2 {
   margin: 0 0 10px 0;
