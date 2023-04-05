@@ -55,29 +55,28 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Genres</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="gallery.html">Comedy</a></li>
-                  <li><a href="gallery.html">Fantasy</a></li>
-                  <li><a href="gallery.html">Crime</a></li>
-                  <li><a href="gallery.html">Drama</a></li>
-                  <li><a href="gallery.html">Music</a></li>
-                  <li><a href="gallery.html">Animation</a></li>
-                  <li><a href="gallery.html">Adventure</a></li>
-                  <li><a href="gallery.html">Thriller</a></li>
-                  <li><a href="gallery.html">Family</a></li>
-                  <li><a href="gallery.html">Mystery</a></li>
-                  <li><a href="gallery.html">Biography</a></li>
-                  <li><a href="gallery.html">Action</a></li>
-                  <li><a href="gallery.html">Film-Noir</a></li>
-                  <li><a href="gallery.html">Sci-Fi</a></li>
-                  <li><a href="gallery.html">War</a></li>
-                  <li><a href="gallery.html">Western</a></li>
-                  <li><a href="gallery.html">Horror</a></li>
-                  <li><a href="gallery.html">Musical</a></li>
-                  <li><a href="gallery.html">Sport</a></li>               
-                </ul>
+          <li class="dropdown"><a href="#"><span>Genres</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="gallery.html">Comedy</a></li>
+              <li><a href="gallery.html">Fantasy</a></li>
+              <li><a href="gallery.html">Crime</a></li>
+              <li><a href="gallery.html">Drama</a></li>
+              <li><a href="gallery.html">Music</a></li>
+              <li><a href="gallery.html">Animation</a></li>
+              <li><a href="gallery.html">Adventure</a></li>
+              <li><a href="gallery.html">Thriller</a></li>
+              <li><a href="gallery.html">Family</a></li>
+              <li><a href="gallery.html">Mystery</a></li>
+              <li><a href="gallery.html">Biography</a></li>
+              <li><a href="gallery.html">Action</a></li>
+              <li><a href="gallery.html">Film-Noir</a></li>
+              <li><a href="gallery.html">Sci-Fi</a></li>
+              <li><a href="gallery.html">War</a></li>
+              <li><a href="gallery.html">Western</a></li>
+              <li><a href="gallery.html">Horror</a></li>
+              <li><a href="gallery.html">Musical</a></li>
+              <li><a href="gallery.html">Sport</a></li>
+            </ul>
           </li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -96,15 +95,70 @@
     </div>
   </header><!-- End Header -->
 
-
+  <!-- data-bs-toggle="modal" data-bs-target="#movieModal" -->
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade"
-    data-aos-delay="1500" data-bs-toggle="modal" data-bs-target="#movieModal">
+  <section id="hero" class="hero d-flex justify-content-center align-items-center" data-aos="fade"
+    data-aos-delay="1500">
+    
+    <div class="container">
+      <div class="row justify-content-center align-items-center ">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#movieModal"  data-id="142cf61864b9966ea078c155">
+              <img src="https://initiate.alphacoders.com/images/130/cropped-1920-1080-1302522.jpg?802"
+                class="d-block w-100">
+            </div>
+            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#movieModal" data-id="642d941df4503c7b7383d6a4">
+              <img src="https://images.hdqwalls.com/download/john-wick-chapter-4-cast-poster-5k-dc-1920x1080.jpg"
+                class="d-block w-100">
+            </div>
+    
+            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#movieModal" data-id="642df625fc762915cc64dd49">
+              <img src="https://images.hdqwalls.com/download/dungeons-and-dragons-honor-among-thieves-x4-1920x1080.jpg"
+                class="d-block w-100">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+    
 
 
-          <!-- <a class="btn-get-started" id="watchButton">Watch Trailer</a> -->
-   
+    <!-- <a class="btn-get-started" id="watchButton">Watch Trailer</a> -->
+
   </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Movie Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Movies</h2>
+        <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
+
+
+        </div>
+      </div>
+    </section><!-- End Movie Section -->
+
+  </main><!-- End #main -->
 
   <!-- Modal -->
   <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
@@ -153,20 +207,7 @@
   </div>
   <!-- End Modal -->
 
-  <main id="main">
 
-    <!-- ======= Movie Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container">
-        <h2>Movies</h2>
-        <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
-
-
-        </div>
-      </div>
-    </section><!-- End Movie Section -->
-
-  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">

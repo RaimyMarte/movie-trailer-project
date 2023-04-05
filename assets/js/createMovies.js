@@ -1,4 +1,4 @@
-import { getDataFromAPI } from "./getDataFromAPI.js"
+import { getDataByID, getDataFromAPI } from "./getDataFromAPI.js"
 
 export const createMoviesContainer = (movie = {}) => {
     const movieSectionRow = document.getElementById('movieSectionRow')
@@ -37,23 +37,12 @@ export const setModalData = (movie = {}) => {
 }
 
 const movieData = await getDataFromAPI()
-
 movieData.forEach(movie => createMoviesContainer(movie))
 
-const hero = document.getElementById('hero')
-
-const MarioBros = {
-    "nombre": "The Super Mario Bros",
-    "generos": [
-        "Adventure",
-        "Animation",
-        "Comedy"
-    ],
-    "direccion": "Aaron Horvath, Michael Jelenic",
-    "reparto": "Chris Pratt, Anya Taylor-Joy, Charlie Day",
-    "sinopsis": "A Brooklyn plumber named Mario travels through the Mushroom Kingdom with a princess named Peach and an anthropomorphic mushroom named Toad to find Mario's brother, Luigi, and to save the world from a ruthless fire-breathing Koopa named Bowser.",
-    "video": "TnGl01FkMMo",
-    "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81VxuVBN1cL.jpg",
-    "year": "2023",
-}
-hero.addEventListener('click', () => setModalData(MarioBros))
+const carouselItems = document.querySelectorAll('.carousel-item')
+carouselItems.forEach(item => {
+    item.addEventListener('click', async () => {
+        const carouselItemData = await getDataByID(item.dataset.id)
+        setModalData(carouselItemData)
+    })
+})

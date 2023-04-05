@@ -5,3 +5,11 @@ export const getDataFromAPI = async () => {
 
     return data
 }
+
+export const getDataByID = async (id) => {
+    const url = `http://localhost:3000/movie/${id}`
+    const response = await fetch(url)
+    const data = await response.json()
+
+    return data
+}
