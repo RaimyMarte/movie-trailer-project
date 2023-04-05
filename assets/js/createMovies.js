@@ -1,3 +1,5 @@
+import { getDataFromAPI } from "./getDataFromAPI.js"
+
 export const createMoviesContainer = (movie = {}) => {
     const movieSectionRow = document.getElementById('movieSectionRow')
     const divCol = document.createElement('div')
@@ -19,19 +21,38 @@ export const createMoviesContainer = (movie = {}) => {
 export const setModalData = (movie = {}) => {
     const movieName = document.getElementById('movie-name')
     const movieVideo = document.getElementById('movie-video')
-    const movieSinopsis = document.getElementById('movie-sinopsis')
-    const movieReparto = document.getElementById('movie-reparto')
-    const movieDireccion = document.getElementById('movie-direccion')
-    const movieGuion = document.getElementById('movie-guion')
-    const movieGeneros = document.getElementById('movie-generos')
-
+    const movieSynopsis = document.getElementById('movie-synopsis')
+    const movieCast = document.getElementById('movie-cast')
+    const movieDirection = document.getElementById('movie-direction')
+    const movieRelease = document.getElementById('movie-release')
+    const movieGenres = document.getElementById('movie-genres')
     movieVideo.setAttribute('src', `https://www.youtube.com/embed/${movie.video}`)
     movieName.textContent = movie.nombre
-    movieSinopsis.textContent = movie.sinopsis
-    movieReparto.textContent = movie.reparto
-    movieDireccion.textContent = movie.direccion
-    movieGuion.textContent = movie.guion
-    movieGeneros.textContent = movie.generos
+    movieSynopsis.textContent = movie.sinopsis
+    movieCast.textContent = movie.reparto
+    movieDirection.textContent = movie.direccion
+    movieRelease.textContent = movie.year
+    movieGenres.textContent = movie.generos
 }
 
+const movieData = await getDataFromAPI()
 
+movieData.forEach(movie => createMoviesContainer(movie))
+
+const hero = document.getElementById('hero')
+
+const MarioBros = {
+    "nombre": "The Super Mario Bros",
+    "generos": [
+        "Adventure",
+        "Animation",
+        "Comedy"
+    ],
+    "direccion": "Aaron Horvath, Michael Jelenic",
+    "reparto": "Chris Pratt, Anya Taylor-Joy, Charlie Day",
+    "sinopsis": "A Brooklyn plumber named Mario travels through the Mushroom Kingdom with a princess named Peach and an anthropomorphic mushroom named Toad to find Mario's brother, Luigi, and to save the world from a ruthless fire-breathing Koopa named Bowser.",
+    "video": "TnGl01FkMMo",
+    "img": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81VxuVBN1cL.jpg",
+    "year": "2023",
+}
+hero.addEventListener('click', () => setModalData(MarioBros))
