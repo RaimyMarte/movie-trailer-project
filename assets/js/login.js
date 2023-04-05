@@ -1,4 +1,4 @@
-if(document.cookie) window.location.href = "../add-movie.html"
+if (document.cookie) window.location.href = "../add-movie.html"
 
 
 const formLogin = document.getElementById('formLogin')
@@ -24,7 +24,16 @@ formLogin.addEventListener('submit', async (event) => {
 
         window.location.href = "../add-movie.html"
     } catch (error) {
-        console.log(error)
+        Swal.fire({
+            title: 'Login Error',
+            text: "The email or password is incorrect",
+            icon: 'error',
+            color: 'white',
+            iconColor: '#f52314',
+            background: '#191919',
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 })
 

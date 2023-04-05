@@ -53,30 +53,29 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Genres</span> <i
-                class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="gallery.html">Comedy</a></li>
-                  <li><a href="gallery.html">Fantasy</a></li>
-                  <li><a href="gallery.html">Crime</a></li>
-                  <li><a href="gallery.html">Drama</a></li>
-                  <li><a href="gallery.html">Music</a></li>
-                  <li><a href="gallery.html">Animation</a></li>
-                  <li><a href="gallery.html">Adventure</a></li>
-                  <li><a href="gallery.html">Thriller</a></li>
-                  <li><a href="gallery.html">Family</a></li>
-                  <li><a href="gallery.html">Mystery</a></li>
-                  <li><a href="gallery.html">Biography</a></li>
-                  <li><a href="gallery.html">Action</a></li>
-                  <li><a href="gallery.html">Film-Noir</a></li>
-                  <li><a href="gallery.html">Sci-Fi</a></li>
-                  <li><a href="gallery.html">War</a></li>
-                  <li><a href="gallery.html">Western</a></li>
-                  <li><a href="gallery.html">Horror</a></li>
-                  <li><a href="gallery.html">Musical</a></li>
-                  <li><a href="gallery.html">Sport</a></li>               
-                </ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Genres</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="gallery.html">Comedy</a></li>
+              <li><a href="gallery.html">Fantasy</a></li>
+              <li><a href="gallery.html">Crime</a></li>
+              <li><a href="gallery.html">Drama</a></li>
+              <li><a href="gallery.html">Music</a></li>
+              <li><a href="gallery.html">Animation</a></li>
+              <li><a href="gallery.html">Adventure</a></li>
+              <li><a href="gallery.html">Thriller</a></li>
+              <li><a href="gallery.html">Family</a></li>
+              <li><a href="gallery.html">Mystery</a></li>
+              <li><a href="gallery.html">Biography</a></li>
+              <li><a href="gallery.html">Action</a></li>
+              <li><a href="gallery.html">Film-Noir</a></li>
+              <li><a href="gallery.html">Sci-Fi</a></li>
+              <li><a href="gallery.html">War</a></li>
+              <li><a href="gallery.html">Western</a></li>
+              <li><a href="gallery.html">Horror</a></li>
+              <li><a href="gallery.html">Musical</a></li>
+              <li><a href="gallery.html">Sport</a></li>
+            </ul>
           </li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -108,20 +107,20 @@
         <section class="d-flex flex-column align-items-center" data-aos="fade" data-aos-delay="1500">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
-                <form  method="post" id="formLogin">            
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="******" required>
-                  </div>                  
-                  <div class="text-center"><button type="submit" class="btn btn-danger">Login</button></div>                 
-                </form>
 
-              </div>
+              <form method="post" id="formLogin" class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" id="email" class="form-control" name="email" placeholder="name@example.com"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" placeholder="******" required>
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-danger">Login</button></div>
+              </form>
+
             </div>
           </div>
         </section>
@@ -157,6 +156,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Template Main JS File -->
   <script type="module" src="assets/js/main.js"></script>
