@@ -53,28 +53,32 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#"><span>Gallery</span> <i
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Genres</span> <i
                 class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="gallery.html">Nature</a></li>
-              <li><a href="gallery.html">People</a></li>
-              <li><a href="gallery.html">Architecture</a></li>
-              <li><a href="gallery.html">Animals</a></li>
-              <li><a href="gallery.html">Sports</a></li>
-              <li><a href="gallery.html">Travel</a></li>
-              <li class="dropdown"><a href="#"><span>Sub Menu</span> <i
-                    class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
-                  <li><a href="#">Sub Menu 1</a></li>
-                  <li><a href="#">Sub Menu 2</a></li>
-                  <li><a href="#">Sub Menu 3</a></li>
+                  <li><a href="gallery.html">Comedy</a></li>
+                  <li><a href="gallery.html">Fantasy</a></li>
+                  <li><a href="gallery.html">Crime</a></li>
+                  <li><a href="gallery.html">Drama</a></li>
+                  <li><a href="gallery.html">Music</a></li>
+                  <li><a href="gallery.html">Animation</a></li>
+                  <li><a href="gallery.html">Adventure</a></li>
+                  <li><a href="gallery.html">Thriller</a></li>
+                  <li><a href="gallery.html">Family</a></li>
+                  <li><a href="gallery.html">Mystery</a></li>
+                  <li><a href="gallery.html">Biography</a></li>
+                  <li><a href="gallery.html">Action</a></li>
+                  <li><a href="gallery.html">Film-Noir</a></li>
+                  <li><a href="gallery.html">Sci-Fi</a></li>
+                  <li><a href="gallery.html">War</a></li>
+                  <li><a href="gallery.html">Western</a></li>
+                  <li><a href="gallery.html">Horror</a></li>
+                  <li><a href="gallery.html">Musical</a></li>
+                  <li><a href="gallery.html">Sport</a></li>               
                 </ul>
-              </li>
-            </ul>
           </li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav><!-- .navbar -->
@@ -102,28 +106,15 @@
                 <form method="post" id="addMovieForm">
                   <div class="mb-3">
                     <label for="nombre" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="nombre" placeholder="The Cotton Club">
+                    <input type="text" class="form-control" name="nombre" placeholder="The Cotton Club" required>
                   </div>
                   <div class="mb-3">
-                    <label for="video" class="form-label">Video URL</label>
-                    <input type="text" class="form-control" name="video"
-                      placeholder="https://www.youtube.com/watch?v=c3qWHnJJbSY">
+                    <label for="video" class="form-label">Video ID</label>
+                    <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
                   </div>
                   <div class="mb-3">
                     <label for="year" class="form-label">Release Year</label>
                     <input type="text" class="form-control" name="year" placeholder="1986">
-                  </div>
-                  <div class="mb-3">
-                    <label for="genero[0]" class="form-label">Genre 1</label>
-                    <input type="text" class="form-control" name="generos[0]" placeholder="Crime">
-                  </div>
-                  <div class="mb-3">
-                    <label for="genero[1]" class="form-label">Genre 2</label>
-                    <input type="text" class="form-control" name="generos[1]" placeholder="Drama">
-                  </div>
-                  <div class="mb-3">
-                    <label for="genero[2]" class="form-label">Genre 3</label>
-                    <input type="text" class="form-control" name="generos[2]" placeholder="Comedy">
                   </div>
                   <div class="mb-3">
                     <label for="direccion" class="form-label">Direction</label>
@@ -137,13 +128,80 @@
                   <div class="mb-3">
                     <label for="img" class="form-label">Image URL</label>
                     <input type="text" class="form-control" name="img"
-                      placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg">
+                      placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg" required>
                   </div>
-                  <div class="mb-4">
+                  <div class="mb-3">
                     <label for="sinopsis" class="form-label">Synopsis</label>
                     <textarea type="text" class="form-control" name="sinopsis" rows="6"
                       placeholder="The Cotton Club was a famous night club in Harlem..."></textarea>
                   </div>
+
+                  <p>Genres</p>
+                  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+                    <input type="checkbox" class="btn-check" id="Comedy" value="Comedy">
+                    <label class="btn btn-outline-danger" for="Comedy">Comedy</label>
+
+                    <input type="checkbox" class="btn-check" id="Fantasy" value="Fantasy">
+                    <label class="btn btn-outline-danger" for="Fantasy">Fantasy</label>
+
+                    <input type="checkbox" class="btn-check" id="Crime" value="Crime">
+                    <label class="btn btn-outline-danger" for="Crime">Crime</label>
+
+                    <input type="checkbox" class="btn-check" id="Drama" value="Drama">
+                    <label class="btn btn-outline-danger" for="Drama">Drama</label>
+
+                    <input type="checkbox" class="btn-check" id="Music" value="Music">
+                    <label class="btn btn-outline-danger" for="Music">Music</label>
+
+                    <input type="checkbox" class="btn-check" id="Adventure" value="Adventure">
+                    <label class="btn btn-outline-danger" for="Adventure">Adventure</label>
+                  </div>
+
+                  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+                    <input type="checkbox" class="btn-check" id="Thriller" value="Thriller">
+                    <label class="btn btn-outline-danger" for="Thriller">Thriller</label>
+
+                    <input type="checkbox" class="btn-check" id="Family" value="Family">
+                    <label class="btn btn-outline-danger" for="Family">Family</label>
+
+                    <input type="checkbox" class="btn-check" id="Mystery" value="Mystery">
+                    <label class="btn btn-outline-danger" for="Mystery">Mystery</label>
+
+                    <input type="checkbox" class="btn-check" id="Biography" value="Biography">
+                    <label class="btn btn-outline-danger" for="Biography">Biography</label>
+
+                    <input type="checkbox" class="btn-check" id="Sci-Fi" value="Sci-Fi">
+                    <label class="btn btn-outline-danger" for="Sci-Fi">Sci-Fi</label>
+
+                    <input type="checkbox" class="btn-check" id="Film-Noir" value="Film-Noir">
+                    <label class="btn btn-outline-danger" for="Film-Noir">Film-Noir</label>
+                  </div>
+
+                  <div class="btn-group mb-4" role="group" aria-label="Basic checkbox toggle button group"
+                    name="btn-group">
+                    <input type="checkbox" class="btn-check" id="Animation" value="Animation">
+                    <label class="btn btn-outline-danger" for="Animation">Animation</label>
+
+                    <input type="checkbox" class="btn-check" id="Action" value="Action">
+                    <label class="btn btn-outline-danger" for="Action">Action</label>
+
+                    <input type="checkbox" class="btn-check" id="War" value="War">
+                    <label class="btn btn-outline-danger" for="War">War</label>
+
+                    <input type="checkbox" class="btn-check" id="Western" value="Western">
+                    <label class="btn btn-outline-danger" for="Western">Western</label>
+
+                    <input type="checkbox" class="btn-check" id="Horror" value="Horror">
+                    <label class="btn btn-outline-danger" for="Horror">Horror</label>
+
+                    <input type="checkbox" class="btn-check" id="Musical" value="Musical">
+                    <label class="btn btn-outline-danger" for="Musical">Musical</label>
+
+                    <input type="checkbox" class="btn-check" id="Sport" value="Sport">
+                    <label class="btn btn-outline-danger" for="Sport">Sport</label>
+                  </div>
+
+
 
                   <div class="text-center"><button type="submit" class="btn btn-danger">Add Movie</button></div>
                 </form>

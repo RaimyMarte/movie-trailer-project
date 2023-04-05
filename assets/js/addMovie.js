@@ -1,4 +1,4 @@
-if(!document.cookie) window.location.href = "../login.html"
+if (!document.cookie) window.location.href = "../login.html"
 
 
 const addMovieForm = document.getElementById('addMovieForm')
@@ -9,9 +9,13 @@ addMovieForm.addEventListener('submit', async (event) => {
     const token = document.cookie.replace('token=', '');
     const newMovieData = new FormData(addMovieForm)
     const data = Object.fromEntries(newMovieData)
+    const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+
+    data['generos'] = []
+    checkboxes.forEach(checkbox => data['generos'].push(checkbox.value));
 
     try {
-        const response = await fetch('http://localhost:3000/movie', {
+        fetch('http://localhost:3000/movie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -19,9 +23,6 @@ addMovieForm.addEventListener('submit', async (event) => {
             },
             body: JSON.stringify(data)
         })
-
-        const userData = await response.json()
-        console.log(userData)
     } catch (error) {
         console.log(error)
     }
