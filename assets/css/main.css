@@ -1176,13 +1176,13 @@ h6 {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
   position: relative;
   padding: 140px 0 60px 0;
   background-image: url(https://movies.universalpictures.com/media/smb-1920x1080-rainbowroad-apr5-rgb-4-1-63fff8d9eec08-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center 21%;
   margin-bottom: 3rem;
   cursor: pointer;
 }
