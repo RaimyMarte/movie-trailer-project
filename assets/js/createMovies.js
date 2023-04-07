@@ -27,13 +27,14 @@ export const setModalData = (movie = {}) => {
     const movieDirection = document.getElementById('movie-direction')
     const movieRelease = document.getElementById('movie-release')
     const movieGenres = document.getElementById('movie-genres')
+
     movieVideo.setAttribute('src', `https://www.youtube.com/embed/${movie.video}`)
     movieName.textContent = movie.nombre
     movieSynopsis.textContent = movie.sinopsis
     movieCast.textContent = movie.reparto
     movieDirection.textContent = movie.direccion
     movieRelease.textContent = movie.year
-    movieGenres.textContent = movie.generos
+    movieGenres.textContent = movie['generos'].toString().replaceAll(',', ', ')
 }
 
 const movieData = await getDataFromAPI()
