@@ -1,4 +1,4 @@
-const scrollX = () => {
+const scrollHorizontal = () => {
     const movies = gsap.utils.toArray(".gallery-item");
 
    gsap.to(movies, {
@@ -16,7 +16,7 @@ const scrollX = () => {
 }
 
 setTimeout(() => {
-    scrollX()
+    scrollHorizontal()
 }, 2500);
 
 
