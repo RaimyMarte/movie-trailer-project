@@ -713,8 +713,7 @@ h6 {
 }
 
 .gallery .gallery-item {
-  position: relative;
-  overflow: hidden;
+
   border-radius: 10px;
   cursor: pointer;
 }
