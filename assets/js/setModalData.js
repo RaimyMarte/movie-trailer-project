@@ -23,6 +23,6 @@ const carouselItems = document.querySelectorAll('.carousel-item')
 carouselItems.forEach(item => {
     item.addEventListener('click', async () => {
         const carouselItemData = await getDataByID(item.dataset.id)
-        setModalData(carouselItemData)
+        setModalData(carouselItemData)   
     })
 })
