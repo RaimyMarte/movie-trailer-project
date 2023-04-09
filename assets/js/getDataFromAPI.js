@@ -1,3 +1,5 @@
+import { capitalizedString } from "./capitalizedString.js"
+
 export const getDataFromAPI = async () => {
     const url = 'http://localhost:3000/movie'
     const response = await fetch(url)
@@ -15,12 +17,10 @@ export const getDataByID = async (id) => {
     return data
 }
 
-export const getDataByName = async (name) => {
-    const words = name.split(" ");
-    const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    const capitalizedSentence = capitalizedWords.join(" ");
-
+export const getDataByName = async (string) => {
+    const nombre = capitalizedString(string)
     const data = await getDataFromAPI()
-    return data.filter(movie => movie.nombre.includes(capitalizedSentence))
+
+    return data.filter(movie => movie.nombre.includes(nombre))
 }
 

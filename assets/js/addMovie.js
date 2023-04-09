@@ -1,3 +1,5 @@
+import { capitalizedString } from "./capitalizedString.js";
+
 if (!document.cookie) window.location.href = "../login.html"
 
 
@@ -13,6 +15,8 @@ addMovieForm.addEventListener('submit', async (event) => {
         const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
         const inputs = addMovieForm.querySelectorAll('.form-control')
 
+
+        data['nombre'] = capitalizedString(data.nombre)
         data['generos'] = []
         checkboxes.forEach(checkbox => data['generos'].push(checkbox.value));
 
