@@ -16,7 +16,7 @@ searchForm.addEventListener('submit', async (event) => {
 
   const movies = await getDataByName(search)
 
-  movies.length === 0 ? noResultText.classList.remove('hidden') : noResultText.classList.add('hidden')
+  movies.length === 0 ? noResultText.classList.remove('visually-hidden') : noResultText.classList.add('visually-hidden')
 
   movies.forEach(movie => createMoviesContainer(movie));
 })

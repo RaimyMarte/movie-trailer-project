@@ -1,6 +1,6 @@
 import { capitalizedString } from "./capitalizedString.js";
 
-if (!document.cookie) window.location.href = "../login.html"
+// if (!document.cookie) window.location.href = "../login.html"
 
 
 const addMovieForm = document.getElementById('addMovieForm')
@@ -12,7 +12,7 @@ addMovieForm.addEventListener('submit', async (event) => {
         const token = document.cookie.replace('token=', '');
         const newMovieData = new FormData(addMovieForm)
         const data = Object.fromEntries(newMovieData)
-        const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+        const checkboxes = addMovieForm.querySelectorAll("input[type='checkbox']:checked");
         const inputs = addMovieForm.querySelectorAll('.form-control')
 
 

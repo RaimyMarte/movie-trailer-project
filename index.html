@@ -84,17 +84,16 @@
         </ul>
       </nav><!-- .navbar -->
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      <div class="header-admin">
+        <button class="btn btn-danger" id="logoutButton">Logout</button>
       </div>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
     </div>
   </header><!-- End Header -->
+
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex justify-content-center align-items-center" data-aos="fade"
@@ -144,38 +143,28 @@
       </div>
   </section><!-- End Hero Section -->
 
+
+
+
   <main id="main">
     <!-- ======= Movie Section ======= -->
     <!-- ======= Movie Section ======= -->
     <section id="gallery" class="gallery">
       <div class="container">
         <h2>Movies</h2>
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#add-movieModal">Add Movie</button>
         <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
 
         </div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
 
     </section><!-- End Movie Section -->
   </main><!-- End #main -->
 
-  <!-- Modal -->
+
+
+
+  <!--Movie Modal -->
   <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content bg-dark">
@@ -184,49 +173,285 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="container-fluid">
+
+          <div class="container-fluid" id="movieModalContainer">
             <div class="row justify-content-center align-items-center">
               <div class="col-12">
                 <iframe id="movie-video" width="100%" height="400" src="https://www.youtube.com/embed/yjRHZEUamCc"
                   title="YouTube video player" frameborder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen></iframe>
-                <div class="col-6 mt-3">
-                  <h5>Synopsis </h5>
-                  <p id="movie-synopsis"> John Wick descubre un camino para derrotar a La Alta Mesa. Pero antes de que
-                    pueda ganar su
-                    libertad, Wick debe enfrentarse a un nuevo enemigo con poderosas alianzas en todo el mundo y fuerzas
-                    que convierten aviejos amigos en enemigos.</p>
-                  <hr>
-                  <h5>Main Cast</h5>
-                  <p id="movie-cast">Keanu Reeves, Laurence Fishburne, George Georgiou</p>
-                  <hr>
-                  <h5>Direction</h5>
-                  <p id="movie-direction">Chad Stahelski</p>
-                  <hr>
-                  <h5>Release year</h5>
-                  <p id="movie-release">2022</p>
-                  <hr>
-                  <h5>Genres</h5>
-                  <p id="movie-genres"></p>
-                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <h5>Synopsis </h5>
+                <p id="movie-synopsis"> John Wick descubre un camino para derrotar a La Alta Mesa. Pero antes de que
+                  pueda ganar su
+                  libertad, Wick debe enfrentarse a un nuevo enemigo con poderosas alianzas en todo el mundo y fuerzas
+                  que convierten aviejos amigos en enemigos.</p>
+                <hr>
+                <h5>Main Cast</h5>
+                <p id="movie-cast">Keanu Reeves, Laurence Fishburne, George Georgiou</p>
+                <hr>
+                <h5>Direction</h5>
+                <p id="movie-direction">Chad Stahelski</p>
+                <hr>
+                <h5>Release year</h5>
+                <p id="movie-release">2022</p>
+                <hr>
+                <h5>Genres</h5>
+                <p id="movie-genres"></p>
               </div>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton">Edit</button>
+              <button type="button" class="btn btn-danger adminButtons" id="removeButton">Remove</button>
+            </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+
+
+          <form method="post" id="editMovieForm" class="hidden">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Name</label>
+              <input type="text" class="form-control" name="nombre" placeholder="The Cotton Club" required>
+            </div>
+            <div class="mb-3">
+              <label for="video" class="form-label">Video ID</label>
+              <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
+            </div>
+            <div class="mb-3">
+              <label for="year" class="form-label">Release Year</label>
+              <input type="text" class="form-control" name="year" placeholder="1986">
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Direction</label>
+              <input type="text" class="form-control" name="direccion" placeholder="Francis Ford Coppola">
+            </div>
+            <div class="mb-3">
+              <label for="reparto" class="form-label">Main Cast</label>
+              <input type="text" class="form-control" name="reparto"
+                placeholder="Richard Gere, Gregory Hines, Diane Lane, Lonette McKee">
+            </div>
+            <div class="mb-3">
+              <label for="img" class="form-label">Image URL</label>
+              <input type="text" class="form-control" name="img"
+                placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="sinopsis" class="form-label">Synopsis</label>
+              <textarea type="text" class="form-control" name="sinopsis" rows="6"
+                placeholder="The Cotton Club was a famous night club in Harlem..."></textarea>
+            </div>
+
+            <p>Genres</p>
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+              <input type="checkbox" class="btn-check" id="addComedy" value="Comedy">
+              <label class="btn btn-outline-danger" for="addComedy">Comedy</label>
+
+              <input type="checkbox" class="btn-check" id="addFantasy" value="Fantasy">
+              <label class="btn btn-outline-danger" for="addFantasy">Fantasy</label>
+
+              <input type="checkbox" class="btn-check" id="addCrime" value="Crime">
+              <label class="btn btn-outline-danger" for="addCrime">Crime</label>
+
+              <input type="checkbox" class="btn-check" id="addDrama" value="Drama">
+              <label class="btn btn-outline-danger" for="addDrama">Drama</label>
+
+              <input type="checkbox" class="btn-check" id="addMusic" value="Music">
+              <label class="btn btn-outline-danger" for="addMusic">Music</label>
+
+              <input type="checkbox" class="btn-check" id="addAdventure" value="Adventure">
+              <label class="btn btn-outline-danger" for="addAdventure">Adventure</label>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+              <input type="checkbox" class="btn-check" id="addThriller" value="Thriller">
+              <label class="btn btn-outline-danger" for="addThriller">Thriller</label>
+
+              <input type="checkbox" class="btn-check" id="addFamily" value="Family">
+              <label class="btn btn-outline-danger" for="addFamily">Family</label>
+
+              <input type="checkbox" class="btn-check" id="addMystery" value="Mystery">
+              <label class="btn btn-outline-danger" for="addMystery">Mystery</label>
+
+              <input type="checkbox" class="btn-check" id="addBiography" value="Biography">
+              <label class="btn btn-outline-danger" for="addBiography">Biography</label>
+
+              <input type="checkbox" class="btn-check" id="addSci-Fi" value="Sci-Fi">
+              <label class="btn btn-outline-danger" for="addSci-Fi">Sci-Fi</label>
+
+              <input type="checkbox" class="btn-check" id="addFilm-Noir" value="Film-Noir">
+              <label class="btn btn-outline-danger" for="addFilm-Noir">Film-Noir</label>
+            </div>
+
+            <div class="btn-group mb-4" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+              <input type="checkbox" class="btn-check" id="addAnimation" value="Animation">
+              <label class="btn btn-outline-danger" for="addAnimation">Animation</label>
+
+              <input type="checkbox" class="btn-check" id="addAction" value="Action">
+              <label class="btn btn-outline-danger" for="addAction">Action</label>
+
+              <input type="checkbox" class="btn-check" id="addWar" value="War">
+              <label class="btn btn-outline-danger" for="addWar">War</label>
+
+              <input type="checkbox" class="btn-check" id="addWestern" value="Western">
+              <label class="btn btn-outline-danger" for="addWestern">Western</label>
+
+              <input type="checkbox" class="btn-check" id="addHorror" value="Horror">
+              <label class="btn btn-outline-danger" for="addHorror">Horror</label>
+
+              <input type="checkbox" class="btn-check" id="addMusical" value="Musical">
+              <label class="btn btn-outline-danger" for="addMusical">Musical</label>
+
+              <input type="checkbox" class="btn-check" id="addSport" value="Sport">
+              <label class="btn btn-outline-danger" for="addSport">Sport</label>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary ms-auto adminButtons"
+                id="acceptButton">Accept</button>
+              <button type="button" class="btn btn-danger adminButtons" id="cancelButton"
+                data-bs-dismiss="modal">Cancel</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Modal -->
+  <!-- Movie End Modal -->
+  
+
+
+
+  <!--Add-Movie Modal -->
+  <div class="modal fade" id="add-movieModal" tabindex="-1" aria-labelledby="addMovieModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="movie-name">Add Movie</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post" id="addMovieForm">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Name</label>
+              <input type="text" class="form-control" name="nombre" placeholder="The Cotton Club" required>
+            </div>
+            <div class="mb-3">
+              <label for="video" class="form-label">Video ID</label>
+              <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
+            </div>
+            <div class="mb-3">
+              <label for="year" class="form-label">Release Year</label>
+              <input type="text" class="form-control" name="year" placeholder="1986">
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Direction</label>
+              <input type="text" class="form-control" name="direccion" placeholder="Francis Ford Coppola">
+            </div>
+            <div class="mb-3">
+              <label for="reparto" class="form-label">Main Cast</label>
+              <input type="text" class="form-control" name="reparto"
+                placeholder="Richard Gere, Gregory Hines, Diane Lane, Lonette McKee">
+            </div>
+            <div class="mb-3">
+              <label for="img" class="form-label">Image URL</label>
+              <input type="text" class="form-control" name="img"
+                placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="sinopsis" class="form-label">Synopsis</label>
+              <textarea type="text" class="form-control" name="sinopsis" rows="6"
+                placeholder="The Cotton Club was a famous night club in Harlem..."></textarea>
+            </div>
+
+            <p>Genres</p>
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+              <input type="checkbox" class="btn-check" id="editComedy" value="Comedy">
+              <label class="btn btn-outline-danger" for="editComedy">Comedy</label>
+
+              <input type="checkbox" class="btn-check" id="editFantasy" value="Fantasy">
+              <label class="btn btn-outline-danger" for="editFantasy">Fantasy</label>
+
+              <input type="checkbox" class="btn-check" id="editCrime" value="Crime">
+              <label class="btn btn-outline-danger" for="editCrime">Crime</label>
+
+              <input type="checkbox" class="btn-check" id="editDrama" value="Drama">
+              <label class="btn btn-outline-danger" for="editDrama">Drama</label>
+
+              <input type="checkbox" class="btn-check" id="editMusic" value="Music">
+              <label class="btn btn-outline-danger" for="editMusic">Music</label>
+
+              <input type="checkbox" class="btn-check" id="editAdventure" value="Adventure">
+              <label class="btn btn-outline-danger" for="editAdventure">Adventure</label>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+              <input type="checkbox" class="btn-check" id="editThriller" value="Thriller">
+              <label class="btn btn-outline-danger" for="editThriller">Thriller</label>
+
+              <input type="checkbox" class="btn-check" id="editFamily" value="Family">
+              <label class="btn btn-outline-danger" for="editFamily">Family</label>
+
+              <input type="checkbox" class="btn-check" id="editMystery" value="Mystery">
+              <label class="btn btn-outline-danger" for="editMystery">Mystery</label>
+
+              <input type="checkbox" class="btn-check" id="editBiography" value="Biography">
+              <label class="btn btn-outline-danger" for="editBiography">Biography</label>
+
+              <input type="checkbox" class="btn-check" id="editSci-Fi" value="Sci-Fi">
+              <label class="btn btn-outline-danger" for="editSci-Fi">Sci-Fi</label>
+
+              <input type="checkbox" class="btn-check" id="editFilm-Noir" value="Film-Noir">
+              <label class="btn btn-outline-danger" for="editFilm-Noir">Film-Noir</label>
+            </div>
+
+            <div class="btn-group mb-4" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+              <input type="checkbox" class="btn-check" id="editAnimation" value="Animation">
+              <label class="btn btn-outline-danger" for="editAnimation">Animation</label>
+
+              <input type="checkbox" class="btn-check" id="editAction" value="Action">
+              <label class="btn btn-outline-danger" for="editAction">Action</label>
+
+              <input type="checkbox" class="btn-check" id="editWar" value="War">
+              <label class="btn btn-outline-danger" for="editWar">War</label>
+
+              <input type="checkbox" class="btn-check" id="editWestern" value="Western">
+              <label class="btn btn-outline-danger" for="editWestern">Western</label>
+
+              <input type="checkbox" class="btn-check" id="editHorror" value="Horror">
+              <label class="btn btn-outline-danger" for="editHorror">Horror</label>
+
+              <input type="checkbox" class="btn-check" id="editMusical" value="Musical">
+              <label class="btn btn-outline-danger" for="editMusical">Musical</label>
+
+              <input type="checkbox" class="btn-check" id="editSport" value="Sport">
+              <label class="btn btn-outline-danger" for="editSport">Sport</label>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger">Add Movie</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Add-Movie End Modal -->
+
+
+
 
 
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="container">
+      <div class="footer-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
       <div class="copyright">
         &copy; Copyright <strong><span>TrailerFlix</span></strong>. All Rights Reserved
       </div>
@@ -259,6 +484,7 @@
   <script type="module" src="assets/js/scrollX.js"></script> -->
 
   <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/addMovie.js"></script>
   <script type="module" src="assets/js/showAllMovies.js"></script>
 
 </body>

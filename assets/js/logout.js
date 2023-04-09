@@ -16,20 +16,23 @@ logoutButton.addEventListener('click', async (event) => {
     })
         .then((result) => {
             if (result.isConfirmed) {
-                fetch('http://localhost:3000/user/logout', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                })
+                const token = document.cookie.replace('token=', '');
+                try {
+                    fetch('http://localhost:3000/user/logout', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        },
+                    })
 
-                document.cookie = `token=; ; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`
-                window.location.href = "../login.html"
+                    document.cookie = `token=; ; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`
+                    window.location.href = "../index.html"
+                } catch (error) {
+                    console.log(error)
+                }
+
             }
         })
-    try {
 
-    } catch (error) {
-        console.log(error)
-    }
 })
