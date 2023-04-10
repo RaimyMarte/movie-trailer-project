@@ -1,8 +1,5 @@
 import { capitalizedString } from "./capitalizedString.js";
 
-// if (!document.cookie) window.location.href = "../login.html"
-
-
 const addMovieForm = document.getElementById('addMovieForm')
 
 addMovieForm.addEventListener('submit', async (event) => {

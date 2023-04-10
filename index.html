@@ -85,7 +85,7 @@
       </nav><!-- .navbar -->
 
       <div class="header-admin">
-        <button class="btn btn-danger" id="logoutButton">Logout</button>
+        <button class="btn btn-danger adminButtons" id="logoutButton">Logout</button>
       </div>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -112,7 +112,7 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#movieModal"
-              data-id="6430312847855c8388ac4cdc">
+              data-id="643447135073be3a6f267c2b">
               <img
                 src="https://movies.universalpictures.com/media/smb-1920x1080-toadvista-apr5-rgb-2-1-63fff8f50c210-1.jpg"
                 class="d-block w-100">
@@ -152,7 +152,7 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <h2>Movies</h2>
-        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#add-movieModal">Add Movie</button>
+        <button class="btn btn-danger adminButtons" data-bs-toggle="modal" data-bs-target="#add-movieModal">Add Movie</button>
         <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
 
         </div>
@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton">Edit</button>
+              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton" value="prueba">Edit</button>
               <button type="button" class="btn btn-danger adminButtons" id="removeButton">Remove</button>
             </div>
           </div>
@@ -479,13 +479,17 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/addMovie.js"></script>
+  <script type="module" src="assets/js/logout.js"></script>
+  <script type="module" src="assets/js/showAllMovies.js"></script>
+  <script type="module" src="assets/js/authButtons.js"></script>
+
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script type="module" src="assets/js/scrollX.js"></script> -->
 
-  <script type="module" src="assets/js/main.js"></script>
-  <script type="module" src="assets/js/addMovie.js"></script>
-  <script type="module" src="assets/js/showAllMovies.js"></script>
+
 
 </body>
 

@@ -1,6 +1,3 @@
-if (document.cookie) window.location.href = "../add-movie.html"
-
-
 const formLogin = document.getElementById('formLogin')
 
 formLogin.addEventListener('submit', async (event) => {
@@ -22,7 +19,7 @@ formLogin.addEventListener('submit', async (event) => {
         const { token } = userData
         document.cookie = `token=${token}`
 
-        window.location.href = "../add-movie.html"
+        window.location.href = "../index.html"
     } catch (error) {
         Swal.fire({
             title: 'Login Error',

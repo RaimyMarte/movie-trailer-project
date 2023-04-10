@@ -25,7 +25,7 @@ logoutButton.addEventListener('click', async (event) => {
                             'Authorization': `Bearer ${token}`
                         },
                     })
-
+console.log('logout')
                     document.cookie = `token=; ; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`
                     window.location.href = "../index.html"
                 } catch (error) {
