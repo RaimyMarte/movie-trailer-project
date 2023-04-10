@@ -1,5 +1,8 @@
 const formLogin = document.getElementById('formLogin')
 
+if (document.cookie)
+    window.location.href = "../index.html"
+
 formLogin.addEventListener('submit', async (event) => {
     event.preventDefault()
 
