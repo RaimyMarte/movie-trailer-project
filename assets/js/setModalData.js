@@ -1,5 +1,6 @@
 import { editMovie } from "./editMovie.js"
 import { getDataByID } from "./getDataFromAPI.js"
+import { removeMovie } from "./removeMovie.js"
 
 const editButton = document.getElementById('editButton')
 const removeButton = document.getElementById('removeButton')
@@ -22,10 +23,12 @@ export const setModalData = (movie = {}) => {
     movieGenres.textContent = movie['generos'].toString().replaceAll(',', ', ')
 
     editButton.value = movie._id
+    removeButton.value = movie._id
 }
 
 
 editButton.addEventListener('click', editMovie)
+removeButton.addEventListener('click', removeMovie)
 
 
 const carouselItems = document.querySelectorAll('.carousel-item')

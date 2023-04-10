@@ -10,7 +10,6 @@ const inputs = editMovieForm.querySelectorAll('.form-control')
 const checkboxes = editMovieForm.querySelectorAll("input[type='checkbox']");
 
 
-
 const clearInputs = () => {
   inputs.forEach(input => input.value = '')
   checkboxes.forEach(checkbox => checkbox.checked = false);
@@ -19,39 +18,64 @@ const clearInputs = () => {
   editMovieForm.classList.add('hidden')
 }
 
+const editContainer = async (updatedMovie) => {
+  const divGalleryItem = document.getElementById(updatedMovie._id)
+  const movieImg = divGalleryItem.querySelector('img')
+
+  movieImg.setAttribute('src', updatedMovie.img)
+  setModalData(updatedMovie)
+  divGalleryItem.addEventListener('click', () => setModalData(updatedMovie))
+}
+
 const saveChanges = async (id) => {
-  const token = document.cookie.replace('token=', '');
-  const selectedCheckboxes = document.querySelectorAll("input[type='checkbox']:checked");
-  const newMovieData = new FormData(editMovieForm)
-  const data = Object.fromEntries(newMovieData)
+  try {
+    const token = document.cookie.replace('token=', '');
+    const selectedCheckboxes = document.querySelectorAll("input[type='checkbox']:checked");
+    const newMovieData = new FormData(editMovieForm)
+    const data = Object.fromEntries(newMovieData)
 
-  data['nombre'] = capitalizedString(data.nombre)
-  data['generos'] = []
-  selectedCheckboxes.forEach(checkbox => data['generos'].push(checkbox.value));
+    data['nombre'] = capitalizedString(data.nombre)
+    data['generos'] = []
+    selectedCheckboxes.forEach(checkbox => data['generos'].push(checkbox.value));
 
-  fetch(`http://localhost:3000/movie/${id}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-    },
-    body: JSON.stringify(data)
-  })
 
-  Swal.fire({
-    title: 'Movie Edited',
-    text: "The movie has been edited",
-    icon: 'success',
-    color: 'white',
-    iconColor: '#1f865e',
-    background: '#191919',
-    showConfirmButton: false,
-    timer: 1500
-  })
 
-  const movie = await getDataByID(id)
-  setModalData(movie)
-  clearInputs()
+    const response = await fetch(`http://localhost:3000/movie/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(data)
+    })
+    const updatedMovie = await response.json()
+
+    Swal.fire({
+      title: 'Movie Edited',
+      text: "The movie has been edited",
+      icon: 'success',
+      color: 'white',
+      iconColor: '#1f865e',
+      background: '#191919',
+      showConfirmButton: false,
+      timer: 1500
+    })
+
+    clearInputs()
+    editContainer(updatedMovie)
+
+  } catch (error) {
+    Swal.fire({
+      title: 'Movie edit Error',
+      text: "The movie has not been edited",
+      icon: 'error',
+      color: 'white',
+      iconColor: '#f52314',
+      background: '#191919',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
 }
 
 
@@ -74,6 +98,7 @@ export const editMovie = async ({ target }) => {
 acceptButton.addEventListener('click', (event) => {
   event.preventDefault()
   saveChanges(event.target.value)
+
 })
 
-movieModal.addEventListener('hidden.bs.modal', clearInputs)
+movieModal.addEventListener('hide.bs.modal', clearInputs)

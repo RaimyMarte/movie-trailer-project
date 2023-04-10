@@ -29,10 +29,17 @@ logoutButton.addEventListener('click', async (event) => {
                     window.location.href = ""
 
                 } catch (error) {
-                    console.log(error)
+                    Swal.fire({
+                        title: 'Logout Error',
+                        text: "Logout Error",
+                        icon: 'error',
+                        color: 'white',
+                        iconColor: '#f52314',
+                        background: '#191919',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
                 }
-
             }
         })
-
 })
