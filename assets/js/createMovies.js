@@ -12,9 +12,10 @@ export const createMoviesContainer = (movie = {}) => {
     movieImg.setAttribute('class', 'img-fluid')
     movieImg.setAttribute('src', movie.img)
 
-    movieSectionRow.appendChild(divGalleryItem)
-    divGalleryItem.appendChild(movieImg)
-
+    // movieSectionRow.appendChild(divGalleryItem)
+    // divGalleryItem.appendChild(movieImg)
+    movieSectionRow.prepend(divGalleryItem)
+    divGalleryItem.prepend(movieImg)
     divGalleryItem.addEventListener('click', () => setModalData(movie))
 }
 
