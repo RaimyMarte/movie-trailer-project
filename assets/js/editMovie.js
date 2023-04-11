@@ -1,5 +1,6 @@
 import { capitalizedString } from "./capitalizedString.js"
 import { getDataByID } from "./getDataFromAPI.js"
+import { previewImg } from "./previewImg.js"
 import { setModalData } from "./setModalData.js"
 
 const acceptButton = document.getElementById('acceptButton')
@@ -102,3 +103,5 @@ acceptButton.addEventListener('click', (event) => {
 })
 
 movieModal.addEventListener('hide.bs.modal', clearInputs)
+
+previewImg(editMovieForm)

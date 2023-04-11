@@ -1,5 +1,6 @@
 import { capitalizedString } from "./capitalizedString.js";
 import { createMoviesContainer } from "./createMovies.js";
+import { previewImg } from "./previewImg.js";
 
 const addMovieForm = document.getElementById('addMovieForm')
 const addMovieModal = document.getElementById('add-movieModal')
@@ -11,6 +12,7 @@ const clearInputs = () => {
     inputs.forEach(input => input.value = '')
     checkboxes.forEach(checkbox => checkbox.checked = false);
 }
+
 
 addMovieForm.addEventListener('submit', async (event) => {
     event.preventDefault()
@@ -45,7 +47,7 @@ addMovieForm.addEventListener('submit', async (event) => {
             showConfirmButton: false,
             timer: 1500
         })
- 
+
         createMoviesContainer(newMovie)
         clearInputs()
 
@@ -65,3 +67,5 @@ addMovieForm.addEventListener('submit', async (event) => {
 
 
 addMovieModal.addEventListener('hide.bs.modal', clearInputs)
+
+previewImg(addMovieForm)

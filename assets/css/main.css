@@ -76,6 +76,9 @@ margin-right: 10px;
   display: none;
 }
 
+.previewImg{
+  width: 22.5vw;
+}
 
 /*--------------------------------------------------------------
 # Sections & Section Header
