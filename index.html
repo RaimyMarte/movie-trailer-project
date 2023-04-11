@@ -150,8 +150,12 @@
     <!-- ======= Movie Section ======= -->
     <section id="gallery" class="gallery">
       <div class="container">
-        <h2>Movies</h2>
-        <button class="btn btn-danger adminButtons" data-bs-toggle="modal" data-bs-target="#add-movieModal">Add Movie</button>
+        <div class="d-flex">
+          <h2 >Movies</h2>
+          <button class="btn btn-danger adminButtons ms-auto me-3" data-bs-toggle="modal" data-bs-target="#add-movieModal">Add
+            Movie</button>
+        </div>
+      
         <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
 
         </div>
@@ -202,7 +206,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton" value="prueba">Edit</button>
+              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton"
+                value="prueba">Edit</button>
               <button type="button" class="btn btn-danger adminButtons" id="removeButton">Remove</button>
             </div>
           </div>
@@ -243,7 +248,7 @@
             </div>
 
             <p>Genres</p>
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+            <div class="d-flex flex-wrap mb-4 gap-2">
               <input type="checkbox" class="btn-check" id="addComedy" value="Comedy">
               <label class="btn btn-outline-danger" for="addComedy">Comedy</label>
 
@@ -261,9 +266,7 @@
 
               <input type="checkbox" class="btn-check" id="addAdventure" value="Adventure">
               <label class="btn btn-outline-danger" for="addAdventure">Adventure</label>
-            </div>
 
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
               <input type="checkbox" class="btn-check" id="addThriller" value="Thriller">
               <label class="btn btn-outline-danger" for="addThriller">Thriller</label>
 
@@ -281,9 +284,7 @@
 
               <input type="checkbox" class="btn-check" id="addFilm-Noir" value="Film-Noir">
               <label class="btn btn-outline-danger" for="addFilm-Noir">Film-Noir</label>
-            </div>
 
-            <div class="btn-group mb-4" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
               <input type="checkbox" class="btn-check" id="addAnimation" value="Animation">
               <label class="btn btn-outline-danger" for="addAnimation">Animation</label>
 
@@ -306,8 +307,7 @@
               <label class="btn btn-outline-danger" for="addSport">Sport</label>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary ms-auto adminButtons"
-                id="acceptButton">Accept</button>
+              <button type="submit" class="btn btn-primary ms-auto adminButtons" id="acceptButton">Accept</button>
               <button type="button" class="btn btn-danger adminButtons" id="cancelButton"
                 data-bs-dismiss="modal">Cancel</button>
             </div>
@@ -317,7 +317,7 @@
     </div>
   </div>
   <!-- Movie End Modal -->
-  
+
 
 
 
@@ -365,7 +365,7 @@
             </div>
 
             <p>Genres</p>
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+            <div class="d-flex flex-wrap mb-4 gap-2">
               <input type="checkbox" class="btn-check" id="editComedy" value="Comedy">
               <label class="btn btn-outline-danger" for="editComedy">Comedy</label>
 
@@ -383,9 +383,7 @@
 
               <input type="checkbox" class="btn-check" id="editAdventure" value="Adventure">
               <label class="btn btn-outline-danger" for="editAdventure">Adventure</label>
-            </div>
 
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
               <input type="checkbox" class="btn-check" id="editThriller" value="Thriller">
               <label class="btn btn-outline-danger" for="editThriller">Thriller</label>
 
@@ -403,9 +401,7 @@
 
               <input type="checkbox" class="btn-check" id="editFilm-Noir" value="Film-Noir">
               <label class="btn btn-outline-danger" for="editFilm-Noir">Film-Noir</label>
-            </div>
 
-            <div class="btn-group mb-4" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
               <input type="checkbox" class="btn-check" id="editAnimation" value="Animation">
               <label class="btn btn-outline-danger" for="editAnimation">Animation</label>
 
