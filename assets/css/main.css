@@ -39,10 +39,6 @@ body {
   background-color: #000;
 }
 
-.header-admin.hidden {
-  visibility: hidden;
-}
-
 
 a {
   color: var(--color-primary);
@@ -61,6 +57,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+}
+#logoutButton{
+  cursor: pointer;
 }
 
 .footer-social-links a{
