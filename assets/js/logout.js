@@ -16,20 +16,30 @@ logoutButton.addEventListener('click', async (event) => {
     })
         .then((result) => {
             if (result.isConfirmed) {
-                fetch('http://localhost:3000/user/logout', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                })
+                const token = document.cookie.replace('token=', '');
+                try {
+                    fetch('http://localhost:3000/user/logout', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        },
+                    })
+                    document.cookie = `token=; ; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`
+                    window.location.href = ""
 
-                document.cookie = `token=; ; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`
-                window.location.href = "../login.html"
+                } catch (error) {
+                    Swal.fire({
+                        title: 'Logout Error',
+                        text: "Logout Error",
+                        icon: 'error',
+                        color: 'white',
+                        iconColor: '#f52314',
+                        background: '#191919',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
             }
         })
-    try {
-
-    } catch (error) {
-        console.log(error)
-    }
 })

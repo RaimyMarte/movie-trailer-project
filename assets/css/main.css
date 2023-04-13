@@ -32,11 +32,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: var(--font-default);
   color: var(--color-default);
   background-color: #000;
 }
+
 
 a {
   color: var(--color-primary);
@@ -55,6 +57,26 @@ h4,
 h5,
 h6 {
   font-family: var(--font-primary);
+}
+#logoutButton{
+  cursor: pointer;
+}
+
+.footer-social-links a{
+color: white;
+margin-right: 10px;
+}
+.footer-social-links a:hover {
+  color: var(--color-primary)
+  }
+
+
+.hidden {
+  display: none;
+}
+
+.previewImg{
+  width: 22.5vw;
 }
 
 /*--------------------------------------------------------------
@@ -450,6 +472,7 @@ h6 {
     visibility: visible;
   }
 }
+
 
 @media (min-width: 1280px) and (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
@@ -1176,16 +1199,16 @@ h6 {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 85vh;
-  position: relative;
-  padding: 140px 0 60px 0;
-  background-image: url(https://movies.universalpictures.com/media/smb-1920x1080-rainbowroad-apr5-rgb-4-1-63fff8d9eec08-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  margin-bottom: 3rem;
+
+  padding: 100px 0 20px 0;
   cursor: pointer;
 }
+
+/* #watchButton{
+  position: absolute;
+  top: 82%;
+  left: 15%;
+} */
 
 
 .hero h2 {
@@ -1269,7 +1292,3 @@ h6 {
 .footer .credits a {
   color: var(--color-primary);
 }
-
-/* .img-fluid{
-  max-width: 100%;
-} */
