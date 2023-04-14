@@ -27,7 +27,7 @@ addMovieForm.addEventListener('submit', async (event) => {
         data['generos'] = []
         selectedCheckboxes.forEach(checkbox => data['generos'].push(checkbox.value));
 
-        const response = await fetch('http://localhost:3000/movie', {
+        const response = await fetch('https://movie-trailer-api.netlify.app/.netlify/functions/index/movie', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
