@@ -23,3 +23,8 @@ export const getDataByName = async (string) => {
     return data.filter(movie => movie.nombre.includes(nombre))
 }
 
+export const getDataByGenre = async (genero) => {
+    const data = await getDataFromAPI()
+    return data.filter(movie => movie.generos.includes(genero))
+}
+
