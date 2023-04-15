@@ -129,7 +129,7 @@
       </section><!-- End Movie Section -->
     </main><!-- End #main -->
 
-     <!--Movie Modal -->
+  <!--Movie Modal -->
   <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content bg-dark">
@@ -168,7 +168,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton" value="prueba">Edit</button>
+              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton"
+                value="prueba">Edit</button>
               <button type="button" class="btn btn-danger adminButtons" id="removeButton">Remove</button>
             </div>
           </div>
@@ -198,9 +199,12 @@
             </div>
             <div class="mb-3">
               <label for="img" class="form-label">Image URL</label>
-              <input type="text" class="form-control" name="img"
+              <input type="text" class="form-control imgInput" name="img"
                 placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
                 required>
+                <div class="text-center">
+                  <img class="img-fluid mt-3 previewImg">
+                </div>
             </div>
             <div class="mb-3">
               <label for="sinopsis" class="form-label">Synopsis</label>
@@ -209,7 +213,7 @@
             </div>
 
             <p>Genres</p>
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
+            <div class="d-flex flex-wrap mb-4 gap-2">
               <input type="checkbox" class="btn-check" id="addComedy" value="Comedy">
               <label class="btn btn-outline-danger" for="addComedy">Comedy</label>
 
@@ -227,9 +231,7 @@
 
               <input type="checkbox" class="btn-check" id="addAdventure" value="Adventure">
               <label class="btn btn-outline-danger" for="addAdventure">Adventure</label>
-            </div>
 
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
               <input type="checkbox" class="btn-check" id="addThriller" value="Thriller">
               <label class="btn btn-outline-danger" for="addThriller">Thriller</label>
 
@@ -247,9 +249,7 @@
 
               <input type="checkbox" class="btn-check" id="addFilm-Noir" value="Film-Noir">
               <label class="btn btn-outline-danger" for="addFilm-Noir">Film-Noir</label>
-            </div>
 
-            <div class="btn-group mb-4" role="group" aria-label="Basic checkbox toggle button group" name="btn-group">
               <input type="checkbox" class="btn-check" id="addAnimation" value="Animation">
               <label class="btn btn-outline-danger" for="addAnimation">Animation</label>
 
@@ -272,8 +272,7 @@
               <label class="btn btn-outline-danger" for="addSport">Sport</label>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary ms-auto adminButtons"
-                id="acceptButton">Accept</button>
+              <button type="submit" class="btn btn-primary ms-auto adminButtons" id="acceptButton">Accept</button>
               <button type="button" class="btn btn-danger adminButtons" id="cancelButton"
                 data-bs-dismiss="modal">Cancel</button>
             </div>

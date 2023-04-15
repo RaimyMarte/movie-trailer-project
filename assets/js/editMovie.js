@@ -41,7 +41,7 @@ const saveChanges = async (id) => {
 
 
 
-    const response = await fetch(`http://localhost:3000/movie/${id}`, {
+    const response = await fetch(`https://movie-trailer-api.netlify.app/.netlify/functions/index/movie/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

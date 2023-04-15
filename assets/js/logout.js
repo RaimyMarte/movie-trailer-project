@@ -18,7 +18,7 @@ logoutButton.addEventListener('click', async (event) => {
             if (result.isConfirmed) {
                 const token = document.cookie.replace('token=', '');
                 try {
-                    fetch('http://localhost:3000/user/logout', {
+                    fetch('https://movie-trailer-api.netlify.app/.netlify/functions/index/user/logout', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

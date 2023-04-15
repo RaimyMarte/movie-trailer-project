@@ -18,7 +18,7 @@ export const removeMovie = ({ target }) => {
             if (result.isConfirmed) {
                 try {
                     const token = document.cookie.replace('token=', '');
-                    fetch(`http://localhost:3000/movie/${target.value}`, {
+                    fetch(`https://movie-trailer-api.netlify.app/.netlify/functions/index/movie/${target.value}`, {
                         method: 'DELETE',
                         headers: {
                             'Content-Type': 'application/json',
