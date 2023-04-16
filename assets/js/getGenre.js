@@ -7,13 +7,13 @@ const genreText = document.getElementById('genreText')
 
 genres.forEach((genre => {
     genre.addEventListener('click', async (event) => {
-        localStorage.setItem('genre', JSON.stringify(genre.textContent))
+        sessionStorage.setItem('genre', JSON.stringify(genre.textContent))
     })
 }))
 
 deleteAllMoviesContainer()
 
-const savedGenre = JSON.parse(localStorage.getItem('genre'))
+const savedGenre = JSON.parse(sessionStorage.getItem('genre'))
 
 genreTitle.textContent= savedGenre
 genreText.textContent= `Welcome to the ${savedGenre} page on TrailerFlix! Here, you'll find a curated selection of trailers for some of the best movies in the ${savedGenre} genre. Whether you're a die-hard fan of ${savedGenre} or just looking for something new to watch, we've got you covered.`
