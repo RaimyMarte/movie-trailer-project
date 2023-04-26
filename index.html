@@ -54,38 +54,37 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Genres</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li class="dropdown"><a href="#"><span>Géneros</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="gallery.html">Comedy</a></li>
-              <li><a href="gallery.html">Fantasy</a></li>
-              <li><a href="gallery.html">Crime</a></li>
+              <li><a href="gallery.html">Acción</a></li>
+              <li><a href="gallery.html">Animación</a></li>
+              <li><a href="gallery.html">Aventura</a></li>
+              <li><a href="gallery.html">Biografía</a></li>
+              <li><a href="gallery.html">Ciencia Ficción</a></li>
+              <li><a href="gallery.html">Cine Negro</a></li>
+              <li><a href="gallery.html">Comedia</a></li>
+              <li><a href="gallery.html">Crimen</a></li>
+              <li><a href="gallery.html">Deportes</a></li>
               <li><a href="gallery.html">Drama</a></li>
-              <li><a href="gallery.html">Music</a></li>
-              <li><a href="gallery.html">Animation</a></li>
-              <li><a href="gallery.html">Adventure</a></li>
-              <li><a href="gallery.html">Thriller</a></li>
-              <li><a href="gallery.html">Family</a></li>
-              <li><a href="gallery.html">Mystery</a></li>
-              <li><a href="gallery.html">Biography</a></li>
-              <li><a href="gallery.html">Action</a></li>
-              <li><a href="gallery.html">Film-Noir</a></li>
-              <li><a href="gallery.html">Sci-Fi</a></li>
-              <li><a href="gallery.html">War</a></li>
-              <li><a href="gallery.html">Western</a></li>
-              <li><a href="gallery.html">Horror</a></li>
+              <li><a href="gallery.html">Familia</a></li>
+              <li><a href="gallery.html">Fantasía</a></li>
+              <li><a href="gallery.html">Guerra</a></li>
               <li><a href="gallery.html">Musical</a></li>
-              <li><a href="gallery.html">Sport</a></li>
+              <li><a href="gallery.html">Suspenso</a></li>
+              <li><a href="gallery.html">Terror</a></li>
+              <li><a href="gallery.html">Thriller</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="search.html">Search</a></li>
+          <li><a href="about.html">Acerca De</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="search.html">Buscar</a></li>
         </ul>
       </nav><!-- .navbar -->
 
       <div class="header-admin">
-        <button class="btn btn-danger adminButtons" id="logoutButton">Logout</button>
+        <button class="btn btn-danger adminButtons" id="logoutButton">Cerrar Sesión</button>
       </div>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -151,11 +150,12 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <div class="d-flex">
-          <h2 >Movies</h2>
-          <button class="btn btn-danger adminButtons ms-auto " data-bs-toggle="modal" data-bs-target="#add-movieModal">Add
-            Movie</button>
+          <h2>Películas</h2>
+          <button class="btn btn-danger adminButtons ms-auto " data-bs-toggle="modal"
+            data-bs-target="#add-movieModal">Agregar
+            Película</button>
         </div>
-      
+
         <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
 
         </div>
@@ -186,133 +186,127 @@
                   allowfullscreen></iframe>
               </div>
               <div class="col-12 mt-3">
-                <h5>Synopsis </h5>
+                <h5>Sipnosis </h5>
                 <p id="movie-synopsis"> John Wick descubre un camino para derrotar a La Alta Mesa. Pero antes de que
                   pueda ganar su
                   libertad, Wick debe enfrentarse a un nuevo enemigo con poderosas alianzas en todo el mundo y fuerzas
                   que convierten aviejos amigos en enemigos.</p>
                 <hr>
-                <h5>Main Cast</h5>
+                <h5>Reparto Principal</h5>
                 <p id="movie-cast">Keanu Reeves, Laurence Fishburne, George Georgiou</p>
                 <hr>
-                <h5>Direction</h5>
+                <h5>Dirección</h5>
                 <p id="movie-direction">Chad Stahelski</p>
                 <hr>
-                <h5>Release year</h5>
+                <h5>Año de lanzamiento</h5>
                 <p id="movie-release">2022</p>
                 <hr>
-                <h5>Genres</h5>
+                <h5>Géneros</h5>
                 <p id="movie-genres"></p>
               </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton"
-                value="prueba">Edit</button>
-              <button type="button" class="btn btn-danger adminButtons" id="removeButton">Remove</button>
+                value="prueba">Editar</button>
+              <button type="button" class="btn btn-danger adminButtons" id="removeButton">Eliminar</button>
             </div>
           </div>
 
 
           <form method="post" id="editMovieForm" class="hidden">
             <div class="mb-3">
-              <label for="nombre" class="form-label">Name</label>
-              <input type="text" class="form-control" name="nombre" placeholder="The Cotton Club" required>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre" placeholder="Trópico de sangre" required>
             </div>
             <div class="mb-3">
               <label for="video" class="form-label">Video ID</label>
               <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
             </div>
             <div class="mb-3">
-              <label for="year" class="form-label">Release Year</label>
-              <input type="text" class="form-control" name="year" placeholder="1986">
+              <label for="year" class="form-label">Año de lanzamiento</label>
+              <input type="text" class="form-control" name="year" placeholder="2010">
             </div>
             <div class="mb-3">
-              <label for="direccion" class="form-label">Direction</label>
-              <input type="text" class="form-control" name="direccion" placeholder="Francis Ford Coppola">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" name="direccion" placeholder="Juan Delancer">
             </div>
             <div class="mb-3">
-              <label for="reparto" class="form-label">Main Cast</label>
+              <label for="reparto" class="form-label">Reparto Principal</label>
               <input type="text" class="form-control" name="reparto"
-                placeholder="Richard Gere, Gregory Hines, Diane Lane, Lonette McKee">
+                placeholder="Michelle Rodríguez, Juan Fernández, Sergio Carlo">
             </div>
             <div class="mb-3">
-              <label for="img" class="form-label">Image URL</label>
+              <label for="img" class="form-label">Imagen URL</label>
               <input type="text" class="form-control imgInput" name="img"
                 placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
                 required>
-                <div class="text-center">
-                  <img class="img-fluid mt-3 previewImg">
-                </div>
+              <div class="text-center">
+                <img class="img-fluid mt-3 previewImg">
+              </div>
             </div>
             <div class="mb-3">
-              <label for="sinopsis" class="form-label">Synopsis</label>
+              <label for="sinopsis" class="form-label">Sinopsis</label>
               <textarea type="text" class="form-control" name="sinopsis" rows="6"
-                placeholder="The Cotton Club was a famous night club in Harlem..."></textarea>
+                placeholder="La película se enfoca en Minerva Mirabal y cuenta la verdadera historia..."></textarea>
             </div>
 
-            <p>Genres</p>
+            <p>Géneros</p>
             <div class="d-flex flex-wrap mb-4 gap-2">
-              <input type="checkbox" class="btn-check" id="addComedy" value="Comedy">
-              <label class="btn btn-outline-danger" for="addComedy">Comedy</label>
+              <input type="checkbox" class="btn-check" id="editAction" value="Acción">
+              <label class="btn btn-outline-danger" for="editAction">Acción</label>
+              
+              <input type="checkbox" class="btn-check" id="editAnimation" value="Animación">
+              <label class="btn btn-outline-danger" for="editAnimation">Animación</label>
 
-              <input type="checkbox" class="btn-check" id="addFantasy" value="Fantasy">
-              <label class="btn btn-outline-danger" for="addFantasy">Fantasy</label>
+              <input type="checkbox" class="btn-check" id="editAdventure" value="Aventura">
+              <label class="btn btn-outline-danger" for="editAdventure">Aventura</label>
 
-              <input type="checkbox" class="btn-check" id="addCrime" value="Crime">
-              <label class="btn btn-outline-danger" for="addCrime">Crime</label>
+              <input type="checkbox" class="btn-check" id="editBiography" value="Biografía">
+              <label class="btn btn-outline-danger" for="editBiography">Biografía</label>
 
-              <input type="checkbox" class="btn-check" id="addDrama" value="Drama">
-              <label class="btn btn-outline-danger" for="addDrama">Drama</label>
+              <input type="checkbox" class="btn-check" id="editSci-Fi" value="Ciencia Ficción">
+              <label class="btn btn-outline-danger" for="editSci-Fi">Ciencia Ficción</label>
 
-              <input type="checkbox" class="btn-check" id="addMusic" value="Music">
-              <label class="btn btn-outline-danger" for="addMusic">Music</label>
+              <input type="checkbox" class="btn-check" id="editFilm-Noir" value="Cine Negro">
+              <label class="btn btn-outline-danger" for="editFilm-Noir">Cine Negro</label>
 
-              <input type="checkbox" class="btn-check" id="addAdventure" value="Adventure">
-              <label class="btn btn-outline-danger" for="addAdventure">Adventure</label>
+              <input type="checkbox" class="btn-check" id="editComedy" value="Comedia">
+              <label class="btn btn-outline-danger" for="editComedy">Comedia</label>
 
-              <input type="checkbox" class="btn-check" id="addThriller" value="Thriller">
-              <label class="btn btn-outline-danger" for="addThriller">Thriller</label>
+              <input type="checkbox" class="btn-check" id="editCrime" value="Crimen">
+              <label class="btn btn-outline-danger" for="editCrime">Crimen</label>
+                   
+              <input type="checkbox" class="btn-check" id="editSport" value="Deportes">
+              <label class="btn btn-outline-danger" for="editSport">Deportes</label>
 
-              <input type="checkbox" class="btn-check" id="addFamily" value="Family">
-              <label class="btn btn-outline-danger" for="addFamily">Family</label>
+              <input type="checkbox" class="btn-check" id="editDrama" value="Drama">
+              <label class="btn btn-outline-danger" for="editDrama">Drama</label>
 
-              <input type="checkbox" class="btn-check" id="addMystery" value="Mystery">
-              <label class="btn btn-outline-danger" for="addMystery">Mystery</label>
+              <input type="checkbox" class="btn-check" id="editFamily" value="Familia">
+              <label class="btn btn-outline-danger" for="editFamily">Familia</label>
 
-              <input type="checkbox" class="btn-check" id="addBiography" value="Biography">
-              <label class="btn btn-outline-danger" for="addBiography">Biography</label>
+              <input type="checkbox" class="btn-check" id="editFantasy" value="Fantasía">
+              <label class="btn btn-outline-danger" for="editFantasy">Fantasía</label>
 
-              <input type="checkbox" class="btn-check" id="addSci-Fi" value="Sci-Fi">
-              <label class="btn btn-outline-danger" for="addSci-Fi">Sci-Fi</label>
+              <input type="checkbox" class="btn-check" id="editWar" value="Guerra">
+              <label class="btn btn-outline-danger" for="editWar">Guerra</label>
+              
+              <input type="checkbox" class="btn-check" id="editMusical" value="Musical">
+              <label class="btn btn-outline-danger" for="editMusical">Musical</label>
 
-              <input type="checkbox" class="btn-check" id="addFilm-Noir" value="Film-Noir">
-              <label class="btn btn-outline-danger" for="addFilm-Noir">Film-Noir</label>
+              <input type="checkbox" class="btn-check" id="editSupense" value="Suspenso">
+              <label class="btn btn-outline-danger" for="editSupense">Suspenso</label>
 
-              <input type="checkbox" class="btn-check" id="addAnimation" value="Animation">
-              <label class="btn btn-outline-danger" for="addAnimation">Animation</label>
+              <input type="checkbox" class="btn-check" id="editHorror" value="Terror">
+              <label class="btn btn-outline-danger" for="editHorror">Terror</label>
 
-              <input type="checkbox" class="btn-check" id="addAction" value="Action">
-              <label class="btn btn-outline-danger" for="addAction">Action</label>
-
-              <input type="checkbox" class="btn-check" id="addWar" value="War">
-              <label class="btn btn-outline-danger" for="addWar">War</label>
-
-              <input type="checkbox" class="btn-check" id="addWestern" value="Western">
-              <label class="btn btn-outline-danger" for="addWestern">Western</label>
-
-              <input type="checkbox" class="btn-check" id="addHorror" value="Horror">
-              <label class="btn btn-outline-danger" for="addHorror">Horror</label>
-
-              <input type="checkbox" class="btn-check" id="addMusical" value="Musical">
-              <label class="btn btn-outline-danger" for="addMusical">Musical</label>
-
-              <input type="checkbox" class="btn-check" id="addSport" value="Sport">
-              <label class="btn btn-outline-danger" for="addSport">Sport</label>
+              <input type="checkbox" class="btn-check" id="editThriller" value="Thriller">
+              <label class="btn btn-outline-danger" for="editThriller">Thriller</label>         
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary ms-auto adminButtons" id="acceptButton">Accept</button>
+              <button type="submit" class="btn btn-primary ms-auto adminButtons" id="acceptButton">Aceptar</button>
               <button type="button" class="btn btn-danger adminButtons" id="cancelButton"
-                data-bs-dismiss="modal">Cancel</button>
+                data-bs-dismiss="modal">Cancelar</button>
             </div>
           </form>
         </div>
@@ -329,108 +323,102 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="movie-name">Add Movie</h1>
+          <h1 class="modal-title fs-5" id="movie-name">Agregar Película</h1>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form method="post" id="addMovieForm">
             <div class="mb-3">
-              <label for="nombre" class="form-label">Name</label>
-              <input type="text" class="form-control" name="nombre" placeholder="The Cotton Club" required>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre" placeholder="Trópico de sangre" required>
             </div>
             <div class="mb-3">
               <label for="video" class="form-label">Video ID</label>
               <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
             </div>
             <div class="mb-3">
-              <label for="year" class="form-label">Release Year</label>
-              <input type="text" class="form-control" name="year" placeholder="1986">
+              <label for="year" class="form-label">Año de lanzamiento</label>
+              <input type="text" class="form-control" name="year" placeholder="2010">
             </div>
             <div class="mb-3">
-              <label for="direccion" class="form-label">Direction</label>
-              <input type="text" class="form-control" name="direccion" placeholder="Francis Ford Coppola">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" name="direccion" placeholder="Juan Delancer">
             </div>
             <div class="mb-3">
-              <label for="reparto" class="form-label">Main Cast</label>
+              <label for="reparto" class="form-label">Reparto Principal</label>
               <input type="text" class="form-control" name="reparto"
-                placeholder="Richard Gere, Gregory Hines, Diane Lane, Lonette McKee">
+                placeholder="Michelle Rodríguez, Juan Fernández, Sergio Carlo">
             </div>
             <div class="mb-3">
-              <label for="img" class="form-label">Image URL</label>
-              <input type="text" class="form-control imgInput" name="img" 
+              <label for="img" class="form-label">Imagen URL</label>
+              <input type="text" class="form-control imgInput" name="img"
                 placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
                 required>
-                <div class="text-center">
-                  <img class="img-fluid mt-3 previewImg">
-                </div>
+              <div class="text-center">
+                <img class="img-fluid mt-3 previewImg">
+              </div>
             </div>
             <div class="mb-3">
-              <label for="sinopsis" class="form-label">Synopsis</label>
+              <label for="sinopsis" class="form-label">Sinopsis</label>
               <textarea type="text" class="form-control" name="sinopsis" rows="6"
-                placeholder="The Cotton Club was a famous night club in Harlem..."></textarea>
+                placeholder="La película se enfoca en Minerva Mirabal y cuenta la verdadera historia..."></textarea>
             </div>
 
-            <p>Genres</p>
+            <p>Géneros</p>
             <div class="d-flex flex-wrap mb-4 gap-2">
-              <input type="checkbox" class="btn-check" id="editComedy" value="Comedy">
-              <label class="btn btn-outline-danger" for="editComedy">Comedy</label>
+              <input type="checkbox" class="btn-check" id="addAction" value="Acción">
+              <label class="btn btn-outline-danger" for="addAction">Acción</label>
+              
+              <input type="checkbox" class="btn-check" id="addAnimation" value="Animación">
+              <label class="btn btn-outline-danger" for="addAnimation">Animación</label>
 
-              <input type="checkbox" class="btn-check" id="editFantasy" value="Fantasy">
-              <label class="btn btn-outline-danger" for="editFantasy">Fantasy</label>
+              <input type="checkbox" class="btn-check" id="addAdventure" value="Aventura">
+              <label class="btn btn-outline-danger" for="addAdventure">Aventura</label>
 
-              <input type="checkbox" class="btn-check" id="editCrime" value="Crime">
-              <label class="btn btn-outline-danger" for="editCrime">Crime</label>
+              <input type="checkbox" class="btn-check" id="addBiography" value="Biografía">
+              <label class="btn btn-outline-danger" for="addBiography">Biografía</label>
 
-              <input type="checkbox" class="btn-check" id="editDrama" value="Drama">
-              <label class="btn btn-outline-danger" for="editDrama">Drama</label>
+              <input type="checkbox" class="btn-check" id="addSci-Fi" value="Ciencia Ficción">
+              <label class="btn btn-outline-danger" for="addSci-Fi">Ciencia Ficción</label>
 
-              <input type="checkbox" class="btn-check" id="editMusic" value="Music">
-              <label class="btn btn-outline-danger" for="editMusic">Music</label>
+              <input type="checkbox" class="btn-check" id="addFilm-Noir" value="Cine Negro">
+              <label class="btn btn-outline-danger" for="addFilm-Noir">Cine Negro</label>
 
-              <input type="checkbox" class="btn-check" id="editAdventure" value="Adventure">
-              <label class="btn btn-outline-danger" for="editAdventure">Adventure</label>
+              <input type="checkbox" class="btn-check" id="addComedy" value="Comedia">
+              <label class="btn btn-outline-danger" for="addComedy">Comedia</label>
 
-              <input type="checkbox" class="btn-check" id="editThriller" value="Thriller">
-              <label class="btn btn-outline-danger" for="editThriller">Thriller</label>
+              <input type="checkbox" class="btn-check" id="addCrime" value="Crimen">
+              <label class="btn btn-outline-danger" for="addCrime">Crimen</label>
+                   
+              <input type="checkbox" class="btn-check" id="addSport" value="Deportes">
+              <label class="btn btn-outline-danger" for="addSport">Deportes</label>
 
-              <input type="checkbox" class="btn-check" id="editFamily" value="Family">
-              <label class="btn btn-outline-danger" for="editFamily">Family</label>
+              <input type="checkbox" class="btn-check" id="addDrama" value="Drama">
+              <label class="btn btn-outline-danger" for="addDrama">Drama</label>
 
-              <input type="checkbox" class="btn-check" id="editMystery" value="Mystery">
-              <label class="btn btn-outline-danger" for="editMystery">Mystery</label>
+              <input type="checkbox" class="btn-check" id="addFamily" value="Familia">
+              <label class="btn btn-outline-danger" for="addFamily">Familia</label>
 
-              <input type="checkbox" class="btn-check" id="editBiography" value="Biography">
-              <label class="btn btn-outline-danger" for="editBiography">Biography</label>
+              <input type="checkbox" class="btn-check" id="addFantasy" value="Fantasía">
+              <label class="btn btn-outline-danger" for="addFantasy">Fantasía</label>
 
-              <input type="checkbox" class="btn-check" id="editSci-Fi" value="Sci-Fi">
-              <label class="btn btn-outline-danger" for="editSci-Fi">Sci-Fi</label>
+              <input type="checkbox" class="btn-check" id="addWar" value="Guerra">
+              <label class="btn btn-outline-danger" for="addWar">Guerra</label>
+              
+              <input type="checkbox" class="btn-check" id="addMusical" value="Musical">
+              <label class="btn btn-outline-danger" for="addMusical">Musical</label>
 
-              <input type="checkbox" class="btn-check" id="editFilm-Noir" value="Film-Noir">
-              <label class="btn btn-outline-danger" for="editFilm-Noir">Film-Noir</label>
+              <input type="checkbox" class="btn-check" id="addSupense" value="Suspenso">
+              <label class="btn btn-outline-danger" for="addSupense">Suspenso</label>
 
-              <input type="checkbox" class="btn-check" id="editAnimation" value="Animation">
-              <label class="btn btn-outline-danger" for="editAnimation">Animation</label>
+              <input type="checkbox" class="btn-check" id="addHorror" value="Terror">
+              <label class="btn btn-outline-danger" for="addHorror">Terror</label>
 
-              <input type="checkbox" class="btn-check" id="editAction" value="Action">
-              <label class="btn btn-outline-danger" for="editAction">Action</label>
-
-              <input type="checkbox" class="btn-check" id="editWar" value="War">
-              <label class="btn btn-outline-danger" for="editWar">War</label>
-
-              <input type="checkbox" class="btn-check" id="editWestern" value="Western">
-              <label class="btn btn-outline-danger" for="editWestern">Western</label>
-
-              <input type="checkbox" class="btn-check" id="editHorror" value="Horror">
-              <label class="btn btn-outline-danger" for="editHorror">Horror</label>
-
-              <input type="checkbox" class="btn-check" id="editMusical" value="Musical">
-              <label class="btn btn-outline-danger" for="editMusical">Musical</label>
-
-              <input type="checkbox" class="btn-check" id="editSport" value="Sport">
-              <label class="btn btn-outline-danger" for="editSport">Sport</label>
+              <input type="checkbox" class="btn-check" id="addThriller" value="Thriller">
+              <label class="btn btn-outline-danger" for="addThriller">Thriller</label>    
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-danger">Submit</button>
+              <button type="submit" class="btn btn-danger">Aceptar</button>
             </div>
           </form>
         </div>
