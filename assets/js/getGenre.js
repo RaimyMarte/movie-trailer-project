@@ -16,6 +16,6 @@ deleteAllMoviesContainer()
 const savedGenre = JSON.parse(sessionStorage.getItem('genre'))
 
 genreTitle.textContent= savedGenre
-genreText.textContent= `Welcome to the ${savedGenre} page on TrailerFlix! Here, you'll find a curated selection of trailers for some of the best movies in the ${savedGenre} genre. Whether you're a die-hard fan of ${savedGenre} or just looking for something new to watch, we've got you covered.`
+genreText.textContent= `¡Bienvenido a la página de ${savedGenre} en TrailerFlix! Aquí encontrarás una cuidada selección de tráileres de algunas de las mejores películas del género ${savedGenre}. Ya sea que sea un fanático acérrimo de ${savedGenre} o simplemente esté buscando algo nuevo para ver, lo tenemos cubierto.`
 const movies = await getDataByGenre(savedGenre)
 movies.forEach(movie => createMoviesContainer(movie));
