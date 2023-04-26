@@ -4,9 +4,7 @@ export const getDataFromAPI = async () => {
     const url = 'https://movie-trailer-api.netlify.app/.netlify/functions/index/movie'
     const response = await fetch(url)
     const data = await response.json()
-
-    // const dataSorted = data.sort((a, b) => a.year - b.year);
-
+    
     return data
 }
 
