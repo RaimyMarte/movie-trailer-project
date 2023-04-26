@@ -5,6 +5,8 @@ export const getDataFromAPI = async () => {
     const response = await fetch(url)
     const data = await response.json()
 
+    // const dataSorted = data.sort((a, b) => a.year - b.year);
+
     return data
 }
 
