@@ -25,8 +25,8 @@ formLogin.addEventListener('submit', async (event) => {
         window.location.href = "../index.html"
     } catch (error) {
         Swal.fire({
-            title: 'Login Error',
-            text: "The email or password is incorrect",
+            title: 'Error al intentar iniciar sesión',
+            text: "El correo electrónico o la contraseña es incorrecta",
             icon: 'error',
             color: 'white',
             iconColor: '#f52314',

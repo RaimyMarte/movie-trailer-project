@@ -38,8 +38,8 @@ addMovieForm.addEventListener('submit', async (event) => {
         const newMovie = await response.json()
 
         Swal.fire({
-            title: 'Movie added',
-            text: "The movie has been added",
+            title: 'Película agregada',
+            text: "La película ha sido agregada",
             icon: 'success',
             color: 'white',
             iconColor: '#1f865e',
@@ -53,8 +53,8 @@ addMovieForm.addEventListener('submit', async (event) => {
 
     } catch (error) {
         Swal.fire({
-            title: 'Movie add Error',
-            text: "The movie has not been added",
+            title: 'Error al agregar película',
+            text: "La película no ha sido agregada",
             icon: 'error',
             color: 'white',
             iconColor: '#f52314',

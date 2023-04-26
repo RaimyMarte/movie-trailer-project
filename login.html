@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TrailerFlix - Login</title>
+  <title>TrailerFlix</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,56 +41,57 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+ <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <i class="bi bi-film"></i>
-        <h1>TrailerFlix</h1>
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <i class="bi bi-film"></i>
+      <h1>TrailerFlix</h1>
+    </a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Genres</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="gallery.html">Comedy</a></li>
-              <li><a href="gallery.html">Fantasy</a></li>
-              <li><a href="gallery.html">Crime</a></li>
-              <li><a href="gallery.html">Drama</a></li>
-              <li><a href="gallery.html">Music</a></li>
-              <li><a href="gallery.html">Animation</a></li>
-              <li><a href="gallery.html">Adventure</a></li>
-              <li><a href="gallery.html">Thriller</a></li>
-              <li><a href="gallery.html">Family</a></li>
-              <li><a href="gallery.html">Mystery</a></li>
-              <li><a href="gallery.html">Biography</a></li>
-              <li><a href="gallery.html">Action</a></li>
-              <li><a href="gallery.html">Film-Noir</a></li>
-              <li><a href="gallery.html">Sci-Fi</a></li>
-              <li><a href="gallery.html">War</a></li>
-              <li><a href="gallery.html">Western</a></li>
-              <li><a href="gallery.html">Horror</a></li>
-              <li><a href="gallery.html">Musical</a></li>
-              <li><a href="gallery.html">Sport</a></li>
-            </ul>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="search.html">Search</a></li>
-        </ul>
-      </nav><!-- .navbar -->
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html" >Inicio</a></li>
+        <li class="dropdown"><a href="#"><span>Géneros</span> <i
+              class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="gallery.html">Acción</a></li>
+            <li><a href="gallery.html">Animación</a></li>
+            <li><a href="gallery.html">Aventura</a></li>
+            <li><a href="gallery.html">Biografía</a></li>
+            <li><a href="gallery.html">Ciencia Ficción</a></li>
+            <li><a href="gallery.html">Cine Negro</a></li>
+            <li><a href="gallery.html">Comedia</a></li>
+            <li><a href="gallery.html">Crimen</a></li>
+            <li><a href="gallery.html">Deportes</a></li>
+            <li><a href="gallery.html">Drama</a></li>
+            <li><a href="gallery.html">Familia</a></li>
+            <li><a href="gallery.html">Fantasía</a></li>
+            <li><a href="gallery.html">Guerra</a></li>
+            <li><a href="gallery.html">Musical</a></li>
+            <li><a href="gallery.html">Suspenso</a></li>
+            <li><a href="gallery.html">Terror</a></li>
+            <li><a href="gallery.html">Thriller</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">Acerca De</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="search.html">Buscar</a></li>
+      </ul>
+    </nav><!-- .navbar -->
 
-      <div class="header-admin">
-        <button class="btn btn-danger adminButtons" id="logoutButton">Logout</button>
-      </div>
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <div class="header-admin">
+      <button class="btn btn-danger adminButtons" id="logoutButton">Cerrar Sesión</button>
     </div>
-  </header><!-- End Header -->
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+  </div>
+</header><!-- End Header -->
+
+
 
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
@@ -98,7 +99,7 @@
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center mb-5 mt-5">
-            <h2>Login</h2>
+            <h2>Iniciar Sesión</h2>
           </div>
         </div>
 
@@ -108,15 +109,15 @@
 
               <form method="post" id="formLogin" class="col-lg-5 col-md-6 col-sm-10 col-xs-12">
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email address</label>
+                  <label for="email" class="form-label">Email</label>
                   <input type="email" id="email" class="form-control" name="email" placeholder="name@example.com"
                     required>
                 </div>
                 <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
+                  <label for="password" class="form-label">Contraseña</label>
                   <input type="password" class="form-control" name="password" placeholder="******" required>
                 </div>
-                <div class="text-center"><button type="submit" class="btn btn-danger">Login</button></div>
+                <div class="text-center"><button type="submit" class="btn btn-danger">Iniciar Sesión</button></div>
               </form>
 
             </div>

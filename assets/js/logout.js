@@ -3,16 +3,16 @@ const logoutButton = document.getElementById('logoutButton')
 logoutButton.addEventListener('click', async (event) => {
     event.preventDefault()
     Swal.fire({
-        title: 'Logout',
-        text: "Do you want to logout?",
+        title: 'Cerrar Sesión',
+        text: "¿Quieres cerrar sesión?",
         icon: 'question',
         color: 'white',
         background: '#19191a',
         showCancelButton: true,
         confirmButtonColor: '#0d6efd',
         cancelButtonColor: '#dc3545',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'Cancel'
+        confirmButtonText: 'Si',
+        cancelButtonText: 'Cancelar'
     })
         .then((result) => {
             if (result.isConfirmed) {

@@ -3,16 +3,16 @@ const movieModal = new bootstrap.Modal('#movieModal')
 export const removeMovie = ({ target }) => {
 
     Swal.fire({
-        title: 'Remove',
-        text: "Do you want to remove the movie?",
+        title: 'Eliminar',
+        text: "¿Quieres eliminar la película??",
         icon: 'question',
         color: 'white',
         background: '#19191a',
         showCancelButton: true,
         confirmButtonColor: '#0d6efd',
         cancelButtonColor: '#dc3545',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'Cancel'
+        confirmButtonText: 'Sí',
+        cancelButtonText: 'Cancelar'
     })
         .then((result) => {
             if (result.isConfirmed) {
@@ -32,8 +32,8 @@ export const removeMovie = ({ target }) => {
                     movieModal.hide()
 
                     Swal.fire({
-                        title: 'Movie Removed',
-                        text: "The movie has been removed",
+                        title: 'Película eliminada',
+                        text: "La película ha sido eliminada",
                         icon: 'success',
                         color: 'white',
                         iconColor: '#1f865e',
@@ -43,8 +43,8 @@ export const removeMovie = ({ target }) => {
                     })
                 } catch (error) {
                     Swal.fire({
-                        title: 'Remove Error',
-                        text: "Remove Error",
+                        title: 'Error al intentar eliminar',
+                        text: "Error al intentar eliminar",
                         icon: 'error',
                         color: 'white',
                         iconColor: '#f52314',

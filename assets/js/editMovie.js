@@ -52,8 +52,8 @@ const saveChanges = async (id) => {
     const updatedMovie = await response.json()
 
     Swal.fire({
-      title: 'Movie Edited',
-      text: "The movie has been edited",
+      title: 'Película editada',
+      text: "La película ha sido editada ",
       icon: 'success',
       color: 'white',
       iconColor: '#1f865e',
@@ -67,8 +67,8 @@ const saveChanges = async (id) => {
 
   } catch (error) {
     Swal.fire({
-      title: 'Movie edit Error',
-      text: "The movie has not been edited",
+      title: 'Error de edición de la película',
+      text: "La película no ha sido editada",
       icon: 'error',
       color: 'white',
       iconColor: '#f52314',
