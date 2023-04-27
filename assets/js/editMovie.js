@@ -64,7 +64,6 @@ const saveChanges = async (id) => {
 
     clearInputs()
     editContainer(updatedMovie)
-    previewImg(editMovieForm)
 
   } catch (error) {
     Swal.fire({
