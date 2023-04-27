@@ -24,6 +24,7 @@ addMovieForm.addEventListener('submit', async (event) => {
         const selectedCheckboxes = addMovieForm.querySelectorAll("input[type='checkbox']:checked");
 
         data['nombre'] = capitalizedString(data.nombre)
+        data['pais'] = capitalizedString(data.pais)
         data['generos'] = []
         selectedCheckboxes.forEach(checkbox => data['generos'].push(checkbox.value));
 

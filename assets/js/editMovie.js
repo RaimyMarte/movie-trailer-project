@@ -36,6 +36,7 @@ const saveChanges = async (id) => {
     const data = Object.fromEntries(newMovieData)
 
     data['nombre'] = capitalizedString(data.nombre)
+    data['pais'] = capitalizedString(data.pais)
     data['generos'] = []
     selectedCheckboxes.forEach(checkbox => data['generos'].push(checkbox.value));
 
