@@ -64,6 +64,7 @@ const saveChanges = async (id) => {
 
     clearInputs()
     editContainer(updatedMovie)
+    previewImg(editMovieForm)
 
   } catch (error) {
     Swal.fire({
@@ -104,4 +105,4 @@ acceptButton.addEventListener('click', (event) => {
 
 movieModal.addEventListener('hide.bs.modal', clearInputs)
 
-previewImg(editMovieForm)
+previewImg(editMovieForm, movieModal)

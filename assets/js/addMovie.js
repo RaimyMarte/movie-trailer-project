@@ -68,4 +68,4 @@ addMovieForm.addEventListener('submit', async (event) => {
 
 addMovieModal.addEventListener('hide.bs.modal', clearInputs)
 
-previewImg(addMovieForm)
+previewImg(addMovieForm, addMovieModal)
