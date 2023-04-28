@@ -152,11 +152,24 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <div class="d-flex">
-          <h2>Películas</h2>
-          <button class="btn btn-danger adminButtons ms-auto " data-bs-toggle="modal"
-            data-bs-target="#add-movieModal">Agregar
-            Película</button>
+          <h2>Películas</h2>          
+            <div class="dropdown ms-auto ">
+              <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ordenar por:
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><button class="dropdown-item" type="button" id="sortByNameDes">Nombre: A-Z</button></li>
+                <li><button class="dropdown-item" type="button" id="sortByNameAsc">Nombre: Z-A</button></li>
+                <li><button class="dropdown-item" type="button" id="sortByYearDes">Lanzamiento: Nuevo a Antiguo</button></li>
+                <li><button class="dropdown-item" type="button" id="sortByYearAsc">Lanzamiento: Antiguo a Nuevo</button></li>
+                <li><button class="dropdown-item" type="button" id="sortByCountryDes">País: A-Z</button></li>
+                <li><button class="dropdown-item" type="button" id="sortByCountryAsc">País: Z-A</button></li>
+              </ul>
+            </div>
         </div>
+        <button class="btn btn-danger adminButtons ms-auto " data-bs-toggle="modal"
+        data-bs-target="#add-movieModal">Agregar
+        Película</button>
 
 
         <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
@@ -495,6 +508,7 @@
   <script type="module" src="assets/js/showAllMovies.js"></script>
   <script type="module" src="assets/js/authButtons.js"></script>
   <script type="module" src="assets/js/getGenre.js"></script>
+  <script type="module" src="assets/js/sortMovies.js"></script>
 
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>

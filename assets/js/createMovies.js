@@ -9,6 +9,9 @@ export const createMoviesContainer = (movie = {}) => {
     divGalleryItem.setAttribute('class', 'col-xl-3 col-lg-4 col-md-6 gallery-item h-100')
     divGalleryItem.setAttribute('data-bs-toggle', 'modal')
     divGalleryItem.setAttribute('data-bs-target', '#movieModal')
+    divGalleryItem.setAttribute('data-nombre', movie.nombre)
+    divGalleryItem.setAttribute('data-year', movie.year)
+    divGalleryItem.setAttribute('data-country', movie.pais)
     movieImg.setAttribute('class', 'img-fluid')
     movieImg.setAttribute('src', movie.img)
 
