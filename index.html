@@ -63,7 +63,6 @@
               <li><a href="gallery.html">Aventura</a></li>
               <li><a href="gallery.html">Biografía</a></li>
               <li><a href="gallery.html">Ciencia Ficción</a></li>
-              <li><a href="gallery.html">Cine Negro</a></li>
               <li><a href="gallery.html">Comedia</a></li>
               <li><a href="gallery.html">Crimen</a></li>
               <li><a href="gallery.html">Deportes</a></li>
@@ -113,21 +112,18 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#movieModal"
-              data-id="643447135073be3a6f267c2b">
-              <img
-                src="https://movies.universalpictures.com/media/smb-1920x1080-toadvista-apr5-rgb-2-1-63fff8f50c210-1.jpg"
-                class="d-block w-100">
+              data-id="644bc28d52fac6e519ae826a">
+              <img src="https://i.ytimg.com/vi/ipYW9ZdUS7Y/maxresdefault.jpg" class="d-block w-100">
             </div>
 
             <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#movieModal"
               data-id="644ad22448f58e9ac799935d">
-              <img src="https://i.ytimg.com/vi/kaluHEA9vVM/maxresdefault.jpg"
-                class="d-block w-100">
+              <img src="https://i.ytimg.com/vi/kaluHEA9vVM/maxresdefault.jpg" class="d-block w-100">
             </div>
 
             <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#movieModal"
-              data-id="64499dc2a253c7c02cd7b776">
-              <img src="https://i.ytimg.com/vi/SlD5i7S2RHI/maxresdefault.jpg" class="d-block w-100">
+              data-id="644bc82552fac6e519ae82e9">
+              <img src=" https://i.ytimg.com/vi/3iFImDG4E2k/maxresdefault.jpg" class="d-block w-100">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -152,24 +148,27 @@
     <section id="gallery" class="gallery">
       <div class="container">
         <div class="d-flex">
-          <h2>Películas</h2>          
-            <div class="dropdown ms-auto ">
-              <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ordenar por:
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><button class="dropdown-item" type="button" id="sortByNameDes">Nombre: A-Z</button></li>
-                <li><button class="dropdown-item" type="button" id="sortByNameAsc">Nombre: Z-A</button></li>
-                <li><button class="dropdown-item" type="button" id="sortByYearDes">Lanzamiento: Nuevo a Antiguo</button></li>
-                <li><button class="dropdown-item" type="button" id="sortByYearAsc">Lanzamiento: Antiguo a Nuevo</button></li>
-                <li><button class="dropdown-item" type="button" id="sortByCountryDes">País: A-Z</button></li>
-                <li><button class="dropdown-item" type="button" id="sortByCountryAsc">País: Z-A</button></li>
-              </ul>
-            </div>
+          <h2>Películas</h2>
+          <div class="dropdown ms-auto ">
+            <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ordenar por:
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><button class="dropdown-item" type="button" id="sortByNameDes">Nombre: A-Z</button></li>
+              <li><button class="dropdown-item" type="button" id="sortByNameAsc">Nombre: Z-A</button></li>
+              <li><button class="dropdown-item" type="button" id="sortByYearDes">Lanzamiento: Nuevo a Antiguo</button>
+              </li>
+              <li><button class="dropdown-item" type="button" id="sortByYearAsc">Lanzamiento: Antiguo a Nuevo</button>
+              </li>
+              <li><button class="dropdown-item" type="button" id="sortByCountryDes">País: A-Z</button></li>
+              <li><button class="dropdown-item" type="button" id="sortByCountryAsc">País: Z-A</button></li>
+            </ul>
+          </div>
         </div>
         <button class="btn btn-danger adminButtons ms-auto " data-bs-toggle="modal"
-        data-bs-target="#add-movieModal">Agregar
-        Película</button>
+          data-bs-target="#add-movieModal">Agregar
+          Película</button>
 
 
         <div class="row gy-4 justify-content-center mt-2" id="movieSectionRow" data-aos="fade" data-aos-delay="100">
@@ -285,9 +284,6 @@
 
               <input type="checkbox" class="btn-check" id="editSci-Fi" value="Ciencia Ficción">
               <label class="btn btn-outline-danger" for="editSci-Fi">Ciencia Ficción</label>
-
-              <input type="checkbox" class="btn-check" id="editFilm-Noir" value="Cine Negro">
-              <label class="btn btn-outline-danger" for="editFilm-Noir">Cine Negro</label>
 
               <input type="checkbox" class="btn-check" id="editComedy" value="Comedia">
               <label class="btn btn-outline-danger" for="editComedy">Comedia</label>
@@ -412,9 +408,6 @@
 
               <input type="checkbox" class="btn-check" id="addSci-Fi" value="Ciencia Ficción">
               <label class="btn btn-outline-danger" for="addSci-Fi">Ciencia Ficción</label>
-
-              <input type="checkbox" class="btn-check" id="addFilm-Noir" value="Cine Negro">
-              <label class="btn btn-outline-danger" for="addFilm-Noir">Cine Negro</label>
 
               <input type="checkbox" class="btn-check" id="addComedy" value="Comedia">
               <label class="btn btn-outline-danger" for="addComedy">Comedia</label>
