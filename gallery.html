@@ -119,163 +119,192 @@
 
 
 
-   <!--Movie Modal -->
-   <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content bg-dark">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="movie-name"></h1>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+ <!--Movie Modal -->
+ <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="movie-name"></h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
-          <div class="container-fluid" id="movieModalContainer">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-12">
-                <iframe id="movie-video" width="100%" height="400" src=""
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
+        <div class="container-fluid" id="movieModalContainer">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <iframe id="movie-video" width="100%" height="400" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="col-12 col-md-7 mt-3 mb-md-3">
+              <p id="movie-synopsis"></p>
+            </div>
+            <div class="col-12 col-md-5 d-flex flex-column gap-3 mb-3 mt-md-3">
+              <div>
+                <h6 class="d-inline">País: </h6>
+                <p id="movie-country" class="d-inline"></p>
               </div>
-              <div class="col-12 mt-3">
-                <h5>Sipnosis </h5>
-                <p id="movie-synopsis"></p>
-                <hr>
-                <h5>País </h5>
-                <p id="movie-country"></p>
-                <hr>
-                <h5>Reparto Principal</h5>
-                <p id="movie-cast"></p>
-                <hr>
-                <h5>Dirección</h5>
-                <p id="movie-direction"></p>
-                <hr>
-                <h5>Año de lanzamiento</h5>
-                <p id="movie-release"></p>
-                <hr>
-                <h5>Géneros</h5>
-                <p id="movie-genres"></p>
+              <div>
+                <h6 class="d-inline">Reparto Principal: </h6>
+                <p id="movie-cast" class="d-inline"></p>
+              </div>
+              <div>
+                <h6 class="d-inline">Dirección: </h6>
+                <p id="movie-direction" class="d-inline"></p>
+              </div>
+              <div>
+                <h6 class="d-inline">Año de lanzamiento: </h6>
+                <p id="movie-release" class="d-inline"></p>
+              </div>
+              <div>
+                <h6 class="d-inline">Géneros: </h6>
+                <p id="movie-genres" class="d-inline"></p>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton"
-                value="prueba">Editar</button>
-              <button type="button" class="btn btn-danger adminButtons" id="removeButton">Eliminar</button>
+
+
+            <!-- <div class="col-12 mt-3">
+              <h5>Sipnosis </h5>
+              <p id="movie-synopsis"></p>
+              <hr>
+              <h5>País </h5>
+              <p id="movie-country"></p>
+              <hr>
+              <h5>Reparto Principal</h5>
+              <p id="movie-cast"></p>
+              <hr>
+              <h5>Dirección</h5>
+              <p id="movie-direction"></p>
+              <hr>
+              <h5>Año de lanzamiento</h5>
+              <p id="movie-release"></p>
+              <hr>
+              <h5>Géneros</h5>
+              <p id="movie-genres"></p>
+            </div> -->
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary ms-auto adminButtons" id="editButton"
+              value="prueba">Editar</button>
+            <button type="button" class="btn btn-danger adminButtons" id="removeButton">Eliminar</button>
+          </div>
+        </div>
+
+
+        <form method="post" id="editMovieForm" class="hidden">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="nombre" placeholder="Trópico de sangre" required>
+          </div>
+          <div class="mb-3">
+            <label for="video" class="form-label">Video ID</label>
+            <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
+          </div>
+          <div class="mb-3">
+            <label for="pais" class="form-label">País</label>
+            <input type="text" class="form-control" name="pais" placeholder="República Dominicana">
+          </div>
+          <div class="mb-3">
+            <label for="year" class="form-label">Año de lanzamiento</label>
+            <input type="text" class="form-control" name="year" placeholder="2010">
+          </div>
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" name="direccion" placeholder="Juan Delancer">
+          </div>
+          <div class="mb-3">
+            <label for="reparto" class="form-label">Reparto Principal</label>
+            <input type="text" class="form-control" name="reparto"
+              placeholder="Michelle Rodríguez, Juan Fernández, Sergio Carlo">
+          </div>
+          <div class="mb-3">
+            <label for="img" class="form-label">Imagen URL</label>
+            <input type="text" class="form-control imgInput" name="img"
+              placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
+              required>
+            <div class="text-center">
+              <img class="img-fluid mt-3 previewImg">
             </div>
           </div>
+          <div class="mb-3">
+            <label for="sinopsis" class="form-label">Sinopsis</label>
+            <textarea type="text" class="form-control" name="sinopsis" rows="6"
+              placeholder="La película se enfoca en Minerva Mirabal y cuenta la verdadera historia..."></textarea>
+          </div>
 
+          <p>Géneros</p>
+          <div class="d-flex flex-wrap mb-4 gap-2">
+            <input type="checkbox" class="btn-check" id="editAction" value="Acción">
+            <label class="btn btn-outline-danger" for="editAction">Acción</label>
 
-          <form method="post" id="editMovieForm" class="hidden">
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" name="nombre" placeholder="Trópico de sangre" required>
-            </div>
-            <div class="mb-3">
-              <label for="video" class="form-label">Video ID</label>
-              <input type="text" class="form-control" name="video" placeholder="cqGjhVJWtEg" required>
-            </div>
-            <div class="mb-3">
-              <label for="pais" class="form-label">País</label>
-              <input type="text" class="form-control" name="pais" placeholder="República Dominicana">
-            </div>
-            <div class="mb-3">
-              <label for="year" class="form-label">Año de lanzamiento</label>
-              <input type="text" class="form-control" name="year" placeholder="2010">
-            </div>
-            <div class="mb-3">
-              <label for="direccion" class="form-label">Dirección</label>
-              <input type="text" class="form-control" name="direccion" placeholder="Juan Delancer">
-            </div>
-            <div class="mb-3">
-              <label for="reparto" class="form-label">Reparto Principal</label>
-              <input type="text" class="form-control" name="reparto"
-                placeholder="Michelle Rodríguez, Juan Fernández, Sergio Carlo">
-            </div>
-            <div class="mb-3">
-              <label for="img" class="form-label">Imagen URL</label>
-              <input type="text" class="form-control imgInput" name="img"
-                placeholder="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
-                required>
-              <div class="text-center">
-                <img class="img-fluid mt-3 previewImg">
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="sinopsis" class="form-label">Sinopsis</label>
-              <textarea type="text" class="form-control" name="sinopsis" rows="6"
-                placeholder="La película se enfoca en Minerva Mirabal y cuenta la verdadera historia..."></textarea>
-            </div>
+            <input type="checkbox" class="btn-check" id="editAnimation" value="Animación">
+            <label class="btn btn-outline-danger" for="editAnimation">Animación</label>
 
-            <p>Géneros</p>
-            <div class="d-flex flex-wrap mb-4 gap-2">
-              <input type="checkbox" class="btn-check" id="editAction" value="Acción">
-              <label class="btn btn-outline-danger" for="editAction">Acción</label>
-              
-              <input type="checkbox" class="btn-check" id="editAnimation" value="Animación">
-              <label class="btn btn-outline-danger" for="editAnimation">Animación</label>
+            <input type="checkbox" class="btn-check" id="editAdventure" value="Aventura">
+            <label class="btn btn-outline-danger" for="editAdventure">Aventura</label>
 
-              <input type="checkbox" class="btn-check" id="editAdventure" value="Aventura">
-              <label class="btn btn-outline-danger" for="editAdventure">Aventura</label>
+            <input type="checkbox" class="btn-check" id="editBiography" value="Biografía">
+            <label class="btn btn-outline-danger" for="editBiography">Biografía</label>
 
-              <input type="checkbox" class="btn-check" id="editBiography" value="Biografía">
-              <label class="btn btn-outline-danger" for="editBiography">Biografía</label>
+            <input type="checkbox" class="btn-check" id="editSci-Fi" value="Ciencia Ficción">
+            <label class="btn btn-outline-danger" for="editSci-Fi">Ciencia Ficción</label>
 
-              <input type="checkbox" class="btn-check" id="editSci-Fi" value="Ciencia Ficción">
-              <label class="btn btn-outline-danger" for="editSci-Fi">Ciencia Ficción</label>
+            <input type="checkbox" class="btn-check" id="editComedy" value="Comedia">
+            <label class="btn btn-outline-danger" for="editComedy">Comedia</label>
 
-              <input type="checkbox" class="btn-check" id="editComedy" value="Comedia">
-              <label class="btn btn-outline-danger" for="editComedy">Comedia</label>
+            <input type="checkbox" class="btn-check" id="editCrime" value="Crimen">
+            <label class="btn btn-outline-danger" for="editCrime">Crimen</label>
 
-              <input type="checkbox" class="btn-check" id="editCrime" value="Crimen">
-              <label class="btn btn-outline-danger" for="editCrime">Crimen</label>
-                   
-              <input type="checkbox" class="btn-check" id="editSport" value="Deportes">
-              <label class="btn btn-outline-danger" for="editSport">Deportes</label>
+            <input type="checkbox" class="btn-check" id="editSport" value="Deportes">
+            <label class="btn btn-outline-danger" for="editSport">Deportes</label>
 
-              <input type="checkbox" class="btn-check" id="editDocumental" value="Documental">
-              <label class="btn btn-outline-danger" for="editDocumental">Documental</label>
+            <input type="checkbox" class="btn-check" id="editDocumental" value="Documental">
+            <label class="btn btn-outline-danger" for="editDocumental">Documental</label>
 
-              <input type="checkbox" class="btn-check" id="editDrama" value="Drama">
-              <label class="btn btn-outline-danger" for="editDrama">Drama</label>
+            <input type="checkbox" class="btn-check" id="editDrama" value="Drama">
+            <label class="btn btn-outline-danger" for="editDrama">Drama</label>
 
-              <input type="checkbox" class="btn-check" id="editFamily" value="Familia">
-              <label class="btn btn-outline-danger" for="editFamily">Familia</label>
+            <input type="checkbox" class="btn-check" id="editFamily" value="Familia">
+            <label class="btn btn-outline-danger" for="editFamily">Familia</label>
 
-              <input type="checkbox" class="btn-check" id="editFantasy" value="Fantasía">
-              <label class="btn btn-outline-danger" for="editFantasy">Fantasía</label>
+            <input type="checkbox" class="btn-check" id="editFantasy" value="Fantasía">
+            <label class="btn btn-outline-danger" for="editFantasy">Fantasía</label>
 
-              <input type="checkbox" class="btn-check" id="editWar" value="Guerra">
-              <label class="btn btn-outline-danger" for="editWar">Guerra</label>
+            <input type="checkbox" class="btn-check" id="editWar" value="Guerra">
+            <label class="btn btn-outline-danger" for="editWar">Guerra</label>
 
-              <input type="checkbox" class="btn-check" id="editStory" value="Historia">
-              <label class="btn btn-outline-danger" for="editStory">Historia</label>
-              
-              <input type="checkbox" class="btn-check" id="editMusical" value="Música">
-              <label class="btn btn-outline-danger" for="editMusical">Música</label>
+            <input type="checkbox" class="btn-check" id="editStory" value="Historia">
+            <label class="btn btn-outline-danger" for="editStory">Historia</label>
 
-              <input type="checkbox" class="btn-check" id="editRomance" value="Romance">
-              <label class="btn btn-outline-danger" for="editRomance">Romance</label>
+            <input type="checkbox" class="btn-check" id="editMusical" value="Música">
+            <label class="btn btn-outline-danger" for="editMusical">Música</label>
 
-              <input type="checkbox" class="btn-check" id="editSupense" value="Suspenso">
-              <label class="btn btn-outline-danger" for="editSupense">Suspenso</label>
+            <input type="checkbox" class="btn-check" id="editRomance" value="Romance">
+            <label class="btn btn-outline-danger" for="editRomance">Romance</label>
 
-              <input type="checkbox" class="btn-check" id="editHorror" value="Terror">
-              <label class="btn btn-outline-danger" for="editHorror">Terror</label>
+            <input type="checkbox" class="btn-check" id="editSupense" value="Suspenso">
+            <label class="btn btn-outline-danger" for="editSupense">Suspenso</label>
 
-              <input type="checkbox" class="btn-check" id="editThriller" value="Thriller">
-              <label class="btn btn-outline-danger" for="editThriller">Thriller</label>         
-            </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary ms-auto adminButtons" id="acceptButton">Aceptar</button>
-              <button type="button" class="btn btn-danger adminButtons" id="cancelButton"
-                data-bs-dismiss="modal">Cancelar</button>
-            </div>
-          </form>
-        </div>
+            <input type="checkbox" class="btn-check" id="editHorror" value="Terror">
+            <label class="btn btn-outline-danger" for="editHorror">Terror</label>
+
+            <input type="checkbox" class="btn-check" id="editThriller" value="Thriller">
+            <label class="btn btn-outline-danger" for="editThriller">Thriller</label>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary ms-auto adminButtons" id="acceptButton">Aceptar</button>
+            <button type="button" class="btn btn-danger adminButtons" id="cancelButton"
+              data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  <!-- Movie End Modal -->
+</div>
+
+<!-- Movie End Modal -->
 
 
   <!-- ======= Footer ======= -->
